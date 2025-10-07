@@ -1,6 +1,6 @@
 # Table of contents
 
-* [arcadia](README.md)
+* [ARCADIA](README.md)
 * [Climate Risk Assessment Toolbox](climate-risk-toolbox.md)
 * [Summary](summary.md)
 * [Introduction](introduction.md)

@@ -1,0 +1,31 @@
+name: Deploy Documentation
+on:
+  push:
+    branches: ["main"]
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js (for GitBook)
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+
+      - name: Install GitBook CLI
+        run: npm install -g gitbook-cli
+
+      - name: Install GitBook Plugins
+        run: gitbook install
+
+      - name: Build GitBook
+        run: gitbook build . ./_book
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./_book

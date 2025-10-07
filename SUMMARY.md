@@ -1,5 +1,8 @@
-# Summary
+# Table of contents
 
+* [arcadia](README.md)
+* [Climate Risk Assessment Toolbox](climate-risk-toolbox.md)
+* [Summary](summary.md)
 * [Introduction](introduction.md)
 * [Risk Assessment Methodology](riskassessmentmethodology.md)
 * [Climate Risk Profiles](climateriskprofiles.md)
@@ -7,6 +10,17 @@
 * [Nature-Based Solutions Library](naturebasedsolutionslibrary.md)
 * [Decision Support Tools](decisionsupporttools.md)
 * [Implementation Guidelines](implementationguidelines.md)
-* [Case Studies](casestudies/)
+* [Case Studies](casestudies/README.md)
+  * [Emilia-Romagna (Italy) Case Study](casestudies/emilia-romagna.md)
+  * [Page 1](casestudies/page-1.md)
+  * [den lab2vej draft2](casestudies/den-lab2vej-draft2.md)
+  * [aut lab3 heatstress draft2](casestudies/aut-lab3-heatstress-draft2.md)
+  * [aut lab1 er dr draft2](casestudies/aut-lab1-er-dr-draft2.md)
+  * [den lab1 vollsmose draft2](casestudies/den-lab1-vollsmose-draft2.md)
+  * [cro krapina zagorje draft2](casestudies/cro-krapina-zagorje-draft2.md)
+  * [er lab1 landsl draft2](casestudies/er-lab1-landsl-draft2.md)
+  * [swe lab2hel bgi draft2](casestudies/swe-lab2hel-bgi-draft2.md)
+  * [er lab3 fias draft2](casestudies/er-lab3-fias-draft2.md)
+  * [slo podravje region draft2](casestudies/slo-podravje-region-draft2.md)
 * [References](references.md)
-*
+* [test](test.md)

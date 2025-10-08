@@ -35,6 +35,8 @@ The workflow is designed to be **transferable to other regions**, even outside A
 The aim is to support **urban planning, public health strategies, and climate adaptation policies**, providing evidence-based insights for municipalities and regional authorities. The outputs allow for **prioritisation of greening measures**, **evaluation of vulnerable districts**, and **long-term integration of NbS** into adaptation strategies.
 
 {% hint style="info" %}
+**Disclaimer**
+
 This tutorial is intended as a general workflow example and does not replace software-specific documentation (e.g., GIS, heatwave modelling tools user/technical manuals). Users should already be familiar with the relevant geospatial data formats, data pre-processing techniques, and modelling concepts, as well as with the specific input/output requirements and run functionalities of the modelling software before attempting to replicate this workflow.
 {% endhint %}
 
@@ -52,7 +54,7 @@ The Climate Risk Assessment (CRA) in Amstetten aims to:
 
 The CRA in Lab 3 is designed for stakeholders involved in **urban planning, environmental health, and climate adaptation policy**.
 
-Intended users include:
+The intended users include:
 
 * **City administrations and municipal planning departments** – to integrate heat risk maps and NbS scenarios into local development frameworks.
 * **Public health authorities** – to identify vulnerable groups and prepare targeted protection measures during heatwaves.
@@ -140,13 +142,13 @@ PALM-4U is the core model for high-resolution urban climate simulations, but it 
 #### Methodology
 
 {% hint style="warning" %}
-**Note temporary workflow.**
+_**Note temporary workflow.**_
 
-The urban climate simulations in Lab 3 are intended to be run with the PALM-4U model. Due to the high computational cost and complexity, simulations are executed on high-performance computing (HPC) systems. Each run—whether baseline or NbS scenario—is resource-intensive, and results are treated as static datasets for downstream risk analysis.
+_The urban climate simulations in Lab 3 are intended to be run with the PALM-4U model. Due to the high computational cost and complexity, simulations are executed on high-performance computing (HPC) systems. Each run—whether baseline or NbS scenario—is resource-intensive, and results are treated as static datasets for downstream risk analysis._
 
-At the current stage, the detailed execution workflow for PALM-4U in Amstetten is still under development; comprehensive documentation on data preparation, model setup, and post-processing will be released during Lab 3.
+_At the current stage, the detailed execution workflow for PALM-4U in Amstetten is still under development; comprehensive documentation on data preparation, model setup, and post-processing will be released during Lab 3._
 
-For tutorial purposes, an alternative workflow based on UMEP (QGIS plugin) is presented. This workflow uses the same data types required by PALM-4U, ensuring consistency in data acquisition and preparation while enabling replicability on standard desktop environments (Windows/Linux).
+_For tutorial purposes, an alternative workflow based on UMEP (QGIS plugin) is presented. This workflow uses the same data types required by PALM-4U, ensuring consistency in data acquisition and preparation while enabling replicability on standard desktop environments (Windows/Linux)._
 {% endhint %}
 
 {% stepper %}
@@ -218,72 +220,48 @@ The baseline **represents the current urban climate conditions** in Amstetten du
 
 This initial model run provides a reference picture of the prevailing situation, highlighting the areas most exposed to high thermal loads due to building density, land cover composition, or lack of vegetation. The outputs take the form of spatial maps and time series of temperature and radiation, which can be analysed to identify hotspots and areas of relative resilience.
 
-Figure 8 – example of Above: Wind speed and global radiation from epw-file. Below: Air temperature from ground station data compared with those simulated in the grid of the model including the station (source \[1])
+<figure><img src="../.gitbook/assets/AUT-Lab3_Heatstress_draft2_media_image10.jpeg" alt=""><figcaption><p>Figure 8 – example of Above: Wind speed and global radiation from epw-file. Below: Air temperature from ground station data compared with those simulated in the grid of the model including the station (source [1])</p></figcaption></figure>
 
-The baseline maps can also be combined with socio-economic datasets, such as population density or income levels, to identify vulnerable groups and evaluate the potential social and economic impacts of heat stress. This integrated view allows the baseline to serve not only as a technical benchmark for subsequent scenario analysis, but also as a decision-support layer for urban planners and public authorities.
+
+
+The baseline maps can also be combined with **socio-economic datasets, such as population density or income levels**, to identify vulnerable groups and evaluate the potential social and economic impacts of heat stress. This integrated view allows the baseline to serve not only as a technical benchmark for subsequent scenario analysis, but also as a decision-support layer for urban planners and public authorities.
+
+<figure><img src="../.gitbook/assets/AUT-Lab3_Heatstress_draft2_media_image11.png" alt=""><figcaption><p>Figure 9 – example of temperature difference in mean ground temperature [°C] for an urban area simulated with UMEP</p></figcaption></figure>
 
 &#x20;
-
-Figure 9 – example of temperature difference in mean ground temperature \[°C] for an urban area simulated with UMEP.
-
-\
-
-
-***
-
-
 {% endstep %}
 
 {% step %}
 ### Step 4 — NbS scenario testing
 
-Using the datasets prepared in Step 1 and the analytical overlays from Step 2, develop a baseline urban climate model to represent current conditions during extreme heat events. The objective is to simulate microclimatic patterns—such as air temperature distribution, surface temperature, and thermal comfort indices—across the study area without any mitigation interventions applied.
 
-This process typically involves:
 
-* Importing pre-processed land cover, vegetation, and morphology grids into the selected modelling framework.
-* Integrating meteorological time series representative of identified heatwave periods.
-* Parameterizing urban form (building heights, materials, vegetation characteristics) to reflect present-day conditions.
-
-Where available, satellite-derived LST maps and temperature anomaly layers from Step 2 can be used to cross-check the model outputs, ensuring that simulated baseline conditions (e.g. Figure 8) are consistent with observed spatial patterns of heat stress.
-
-These validated baseline results then serve as a quantitative reference for evaluating the potential effects of Nature-Based Solutions in the following step.
+Building on the baseline established in Step 3, alternative simulations are carried out to test the effectiveness of selected **Nature-Based Solutions (NbS**) in reducing urban heat stress in Amstetten. The scenarios reflect measures highlighted in regional adaptation strategies, in particular the **increase of urban tree canopy**, the creation of new **public green spaces**, and the implementation of **green roof**s.
 
 &#x20;
 
-The baseline represents the current urban climate conditions in Amstetten during extreme heat events, before the introduction of any Nature-Based Solutions. Using the prepared datasets, the climate modelling suite can be  applied to simulate near-surface air temperature fields, surface temperature distribution, and thermal comfort indices that describe the extent and intensity of urban heat stress across the city (e.g. Figure 8).
-
-This initial model run provides a reference picture of the prevailing situation, highlighting the areas most exposed to high thermal loads due to building density, land cover composition, or lack of vegetation. The outputs take the form of spatial maps and time series of temperature and radiation, which can be analysed to identify hotspots and areas of relative resilience.
-
-Figure 8 – example of Above: Wind speed and global radiation from epw-file. Below: Air temperature from ground station data compared with those simulated in the grid of the model including the station (source \[1])
-
-The baseline maps can also be combined with socio-economic datasets, such as population density or income levels, to identify vulnerable groups and evaluate the potential social and economic impacts of heat stress. This integrated view allows the baseline to serve not only as a technical benchmark for subsequent scenario analysis, but also as a decision-support layer for urban planners and public authorities.
+Each scenario is configured in UMEP by modifying the spatial input layers to represent the planned interventions, while maintaining the same meteorological forcing used for the baseline. Doing so the resulting maps of air temperature, surface temperature, and thermal comfort indices shall be directly compared with the reference case.
 
 &#x20;
 
-Figure 9 – example of temperature difference in mean ground temperature \[°C] for an urban area simulated with UMEP.
+The outputs allow quantification of the cooling effect of each NbS option, highlighting changes in the intensity and extent of heat hotspots and improvements in thermal comfort across different parts of the city.
+
+These results can be again overlaid with socio-economic and demographic layers to identify where the benefits of adaptation measures coincide with concentrations of vulnerable groups.
+
+By comparing NbS scenarios against the baseline, the analysis provides a robust basis for evaluating the potential of green interventions to reduce heat stress and to inform local adaptation planning.
 
 \
 
 
 ***
-
-\[1] [https://umep-docs.readthedocs.io/projects/tutorial/en/latest/Tutorials/UWGSpatial.html#executing-the-model](https://umep-docs.readthedocs.io/projects/tutorial/en/latest/Tutorials/UWGSpatial.html#executing-the-model)
 {% endstep %}
 {% endstepper %}
 
-#### Meteorological inputs
+<details>
 
-Meteorological input requirements and formatting vary depending on the modelling code used. For UHI simulations with UMEP, required variables include air temperature, dew point or relative humidity, surface pressure, wind speed and direction, shortwave radiation (global, diffuse and direct), longwave radiation, precipitation, and cloud cover. UMEP relies on the **EPW format (EnergyPlus Weather)**.
-
-EPW files are “typical meteorological dataset with a typical year” and can be downloaded from several sources (e.g., EnergyPlus, EPWmap) or generated from reanalysis datasets such as **ERA5(-Land)**. Users are encouraged to download the file closest to their location and **adapt it with local meteorological data** so the weather inputs reflect actual conditions of the study area.
-
-Free tools are available to inspect and modify EPW files, such as [Elements](https://bigladdersoftware.com/projects/elements/). Consult the official **UMEP documentation and tutorial examples** to adjust EPW variables for modelling requirements.
-
-Figure 5 – example of EPW files as “typical meteorological dataset with a typical year” downloaded near Amstetten and opened for modification.
-
-Figure 9 – example of temperature difference in mean ground temperature \[°C] for an urban area simulated with UMEP.
-
-References
+<summary>References</summary>
 
 \[1] [https://umep-docs.readthedocs.io/projects/tutorial/en/latest/Tutorials/UWGSpatial.html#executing-the-model](https://umep-docs.readthedocs.io/projects/tutorial/en/latest/Tutorials/UWGSpatial.html#executing-the-model)
+
+</details>
+

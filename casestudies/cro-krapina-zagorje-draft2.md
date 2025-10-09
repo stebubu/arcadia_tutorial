@@ -100,7 +100,9 @@ In line with the IVAVIA methodology, vulnerability is addressed through socio-ec
 Datasets for a hybrid workflow:
 
 {% hint style="info" %}
+**Datasets for a hybrid workflow**
 
+The tutorial adopts a hybrid workflow, combining GIS-based spatial layers (e.g., flood maps, population, buildings) with non-spatial outputs such as composite indicators, charts, and time series. For replicability, most examples are based on openly available European datasets (e.g., Copernicus climate indicators, ERA5-Land), while national datasets—when available—should replace them for higher accuracy.
 {% endhint %}
 
 * The tutorial adopts a hybrid workflow combining GIS-based spatial layers (flood maps, population, buildings) with non-spatial outputs (composite indicators, charts, time series). Examples mainly use openly available European datasets (Copernicus, ERA5-Land); national datasets should replace them where available.

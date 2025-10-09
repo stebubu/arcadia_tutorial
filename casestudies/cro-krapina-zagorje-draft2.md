@@ -314,9 +314,63 @@ These values are purely illustrative. In operational settings, IVAVIA recommends
 {% endstep %}
 
 {% step %}
-### Step 3 — Sensitivity, Exposure, Adaptive Capacity, and Risk aggregation
+### Step 3 — **Risk Aggregation and Results**
 
-Sensitivity (examples, normalized 0–1):
+According to the IVAVIA methodology, the final risk score is obtained by integrating hazard (H), exposure (EX), and vulnerability (V) into a composite index. Vulnerability itself is calculated as a function of sensitivity (SE) and adaptive capacity (AC), following the aggregation approaches described in Section 5.2 of the guidelines:
+
+<figure><img src="../.gitbook/assets/CRO-Krapina-Zagorje_draft2_media_image13.png" alt=""><figcaption></figcaption></figure>
+
+Several methods for combining SE and AC are provided in IVAVIA, ranging from additive models to compensatory approaches. For the sake of clarity and didactic value, this tutorial applies the first aggregation method suggested by IVAVIA—the weighted arithmetic mean—under the simplifying assumption of unitary weights. In this configuration, sensitivity and adaptive capacity contribute equally to vulnerability, and hazard, exposure, and vulnerability contribute equally to the final risk score:
+
+<figure><img src="../.gitbook/assets/cro_formula.png" alt=""><figcaption></figcaption></figure>
+
+With C=(1-AC) .
+
+This choice ensures consistency with IVAVIA while keeping the workflow simple and transparent. In real-world applications, the relative weights of the components should be carefully defined and validated with local stakeholders, as recommended by the methodology.
+
+&#x20;The following tables report the illustrative normalized values used for each of the four hazards in the example area. These values are not observed or refined values, but didactic approximations introduced to demonstrate the workflow:
+
+
+
+<table data-header-hidden><thead><tr><th valign="top">Dimension</th><th valign="top">Indicator</th><th valign="top">Normalized Value</th><th valign="top">Composite Score</th></tr></thead><tbody><tr><td valign="top">Hazard</td><td valign="top">Number of hot days</td><td valign="top">0.52</td><td valign="top">H = 0.52</td></tr><tr><td valign="top">Sensitivity</td><td valign="top">Share of elderly and children in population</td><td valign="top">0.41</td><td valign="top"> </td></tr><tr><td valign="top">Adaptive Capacity</td><td valign="top">Health/social systems, greening programs (assumed)</td><td valign="top">0.60</td><td valign="top">V = (0.41+(1-0.60))/2 = 0.41</td></tr><tr><td valign="top">Exposure</td><td valign="top">Population and buildings (area-wide)</td><td valign="top">1.00</td><td valign="top">EX = 1.00</td></tr><tr><td valign="top">Risk</td><td valign="top">Composite Risk Score</td><td valign="top"> </td><td valign="top">R = (0.52+0.41+1.00)/3 = 0.643</td></tr></tbody></table>
+
+_Table 6 - Heat Hazard (Hot Days)_
+
+<table data-header-hidden><thead><tr><th valign="top">Dimension</th><th valign="top">Indicator</th><th valign="top">Normalized Value</th><th valign="top">Composite Score</th></tr></thead><tbody><tr><td valign="top">Hazard</td><td valign="top">Extreme wind speed days</td><td valign="top">0.41</td><td valign="top">H = 0.41</td></tr><tr><td valign="top">Sensitivity</td><td valign="top">Density of residential buildings</td><td valign="top">0.61</td><td valign="top"> </td></tr><tr><td valign="top">Adaptive Capacity</td><td valign="top">Building standards, warning systems (assumed)</td><td valign="top">0.50</td><td valign="top">V = (0.61+(1-0.50))/2 = 0.555</td></tr><tr><td valign="top">Exposure</td><td valign="top">Population and buildings (area-wide)</td><td valign="top">1.00</td><td valign="top">EX = 1.00</td></tr><tr><td valign="top">Risk</td><td valign="top">Composite Risk Score</td><td valign="top"> </td><td valign="top">R = (0.41+0.555+1.00)/3 = 0.655</td></tr></tbody></table>
+
+_Table 7 - Wind Hazard (Extreme Wind Speed Days)_
+
+
+
+<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Dimension</td><td valign="top">Indicator</td><td valign="top">Normalized Value</td><td valign="top">Composite Score</td></tr><tr><td valign="top">Hazard</td><td valign="top">Extreme precipitation days</td><td valign="top">0.47</td><td valign="top">H = 0.47</td></tr><tr><td valign="top">Sensitivity</td><td valign="top">Share of impermeable surfaces</td><td valign="top">0.75</td><td valign="top"> </td></tr><tr><td valign="top">Adaptive Capacity</td><td valign="top">Drainage/green infrastructure (assumed)</td><td valign="top">0.40</td><td valign="top">V = (0.75+(1-0.40))/2 = 0.675</td></tr><tr><td valign="top">Exposure</td><td valign="top">Population and buildings (area-wide)</td><td valign="top">1.00</td><td valign="top">EX = 1.00</td></tr><tr><td valign="top">Risk</td><td valign="top">Composite Risk Score</td><td valign="top"> </td><td valign="top"><p></p><p>R = (0.47+0.675+1.00)/3 = 0.715</p></td></tr></tbody></table>
+
+_Table 8 - Precipitation Hazard (Extreme Precipitation Days)_
+
+
+
+<table data-header-hidden><thead><tr><th valign="top">Dimension</th><th valign="top">Indicator</th><th valign="top">Normalized Value</th><th valign="top">Composite Score</th></tr></thead><tbody><tr><td valign="top">Dimension</td><td valign="top">Indicator</td><td valign="top">Normalized Value</td><td valign="top">Composite Score</td></tr><tr><td valign="top">Hazard</td><td valign="top">Mean flood depth (100-yr return period)</td><td valign="top">0.37</td><td valign="top">H = 0.37</td></tr><tr><td valign="top">Sensitivity</td><td valign="top">Share of ground-floor residential area</td><td valign="top">0.54</td><td valign="top"> </td></tr><tr><td valign="top">Adaptive Capacity</td><td valign="top">Flood defences, emergency readiness (assumed)</td><td valign="top">0.30</td><td valign="top">V = (0.54+(1-0.30))/2 = 0.62</td></tr><tr><td valign="top">Exposure</td><td valign="top">Share of population/buildings in flood zone</td><td valign="top">0.25</td><td valign="top">EX = 0.25</td></tr><tr><td valign="top">Risk</td><td valign="top">Composite Risk Score</td><td valign="top"> </td><td valign="top">R = (0.37+0.62+0.25)/3 = 0.413</td></tr></tbody></table>
+
+_Table 9 - Flood Hazard (River Flood Depth Maps)_
+
+**Outputs and Visualizations**
+
+&#x20;
+
+In addition to tabular calculations, this CRA workflow highlights the importance of visual outputs for effective communication of results. Graphs and maps make trends and spatial patterns accessible to both experts and non-specialist stakeholders, bridging the gap between technical analysis and decision-making.
+
+&#x20;
+
+Time-series plots illustrate the temporal evolution of hazard indicators (e.g., hot days, extreme precipitation days, wind extremes) under historical and RCP8.5 scenarios. They enable comparison of baseline and projected conditions, making the dynamics of climate risk more tangible. In this example, two indicators—frequency of extreme precipitation days and hot days—show a marked upward trend, underlining the urgency of adaptation and mitigation measures.
+
+&#x20;
+
+Geospatial maps complement this temporal perspective by showing the spatial distribution of risks. Flood hazard maps combined with exposure layers (e.g., population grids or building footprints) identify vulnerable hotspots, supporting emergency preparedness and prioritization of adaptation measures. More complex composite maps can integrate multiple hazards, sensitivity, and adaptive capacity, helping to capture cross-sectoral vulnerabilities.
+
+&#x20;
+
+Together, time series and maps form a dual perspective: temporal trends highlight how risks evolve under climate change, while spatial layers reveal where impacts concentrate. This dual approach is essential for developing policy briefs, planning documents, and awareness tools that translate CRA results into actionable strategies.
+
+The following tables report the illustrative normalized values used for each of the four hazards in the example area. These values are not observed or refined values, but didactic approximations introduced to demonstrate the workflow:
 
 * Heat: share of elderly (>65) and children (<15) → 0.41
 * Wind: density of residential (fragile) buildings → 0.61
@@ -369,6 +423,10 @@ Notes:
 
 * IVAVIA provides several aggregation methods; weights should be defined and validated with stakeholders in operational settings.
 * Sensitivity, exposure, and adaptive-capacity indicators should be adapted to local data and contexts.
+{% endstep %}
+
+{% step %}
+
 {% endstep %}
 {% endstepper %}
 

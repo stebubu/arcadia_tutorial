@@ -105,27 +105,39 @@ Datasets for a hybrid workflow:
 The tutorial adopts a hybrid workflow, combining GIS-based spatial layers (e.g., flood maps, population, buildings) with non-spatial outputs such as composite indicators, charts, and time series. For replicability, most examples are based on openly available European datasets (e.g., Copernicus climate indicators, ERA5-Land), while national datasets—when available—should replace them for higher accuracy.
 {% endhint %}
 
-* The tutorial adopts a hybrid workflow combining GIS-based spatial layers (flood maps, population, buildings) with non-spatial outputs (composite indicators, charts, time series). Examples mainly use openly available European datasets (Copernicus, ERA5-Land); national datasets should replace them where available.
-
-Data table (selected rows):
-
-| Data type / Dimension        | Source (local / national)                             | Role in workflow                                                          | Open/EU alternative                                                                                                                                                                                       |
-| ---------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Flood hazard                 | Flood probability maps (national agencies, e.g., DGU) | Define areas exposed to riverine and pluvial flooding                     | River flood hazard maps for Europe (JRC) https://data.jrc.ec.europa.eu/dataset/1d128b6c-a4ee-4858-9e34-6210707f3c81                                                                                       |
-| Precipitation extremes       | DHMZ / RegCM4 baseline grid 12.5 km                   | Input for flood hazard (pluvial flooding) and standalone hazard indicator | ERA5-Land https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land?tab=download; Copernicus Climate Indicators https://cds.climate.copernicus.eu/datasets/sis-ecde-climate-indicators?tab=overview |
-| Exposure – Population        | Local census (may be restricted)                      | Quantify people potentially affected                                      | WorldPop https://dx.doi.org/10.5258/SOTON/WP00646; HDX Croatia population https://data.humdata.org/dataset/croatia-high-resolution-population-density-maps-demographic-estimates                          |
-| Exposure – Built environment | DGU GIS portal (may be limited)                       | Identify exposed assets and infrastructure                                | OpenStreetMap building layer https://osmbuildings.org/                                                                                                                                                    |
-| Administrative boundaries    | DGU GIS portal (may be limited)                       | Isolate area/city of interest                                             | GADM https://gadm.org/download\_country.html                                                                                                                                                              |
+| Data type / Dimension        | Source (local / national)                                                                                                                                                                                                          | Role in workflow                                                          | Open/EU alternative                                                                                                                                                                                                                                          |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Flood hazard                 | Flood probability maps (national agencies, e.g., DGU)                                                                                                                                                                              | Define areas exposed to riverine and pluvial flooding                     | [River flood hazard maps for Europe and the Mediterranean Basin region](https://data.jrc.ec.europa.eu/dataset/1d128b6c-a4ee-4858-9e34-6210707f3c81) (fluvial flood only), see note after the table                                                           |
+| Precipitation extremes       | <p><a href="https://meteo.hr/index_en.php">DHMZ </a>– Krapina Main Meteorological Station (1994–2020, daily/monthly precipitation, extremes)</p><p>(upon request)</p>                                                              | Input for flood hazard (pluvial flooding) and standalone hazard indicator | <p><a href="https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land?tab=download">ERA5-Land hourly data from 1950 to present</a></p><p>(5 km)</p>                                                                                                    |
+| Precipitation extremes       | [RegCM4 ](https://repozitorij.meteo.hr/en/islandora/object/meteo%3A11)baseline grid 12.5 km (HPC Velebit, EURO-CORDEX downscaled reanalysis) Include climate projections (see note after the table)                                | Input for flood hazard (pluvial flooding) and standalone hazard indicator | [Climate indicators for Europe from 1940 to 2100](https://cds.climate.copernicus.eu/datasets/sis-ecde-climate-indicators?tab=overview) derived from reanalysis and climate projections (0.25°)                                                               |
+| Precipitation extremes       | [DHMZ ](https://meteo.hr/index_en.php)– Krapina Main Meteorological Station (temperature, hot days, extremes, 1994–2020)                                                                                                           | Input for flood hazard (pluvial flooding) and standalone hazard indicator | <p><a href="https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land?tab=download">ERA5-Land hourly data from 1950 to present</a></p><p>(5 km)</p>                                                                                                    |
+| Heatwave hazard              | [RegCM4 ](https://repozitorij.meteo.hr/en/islandora/object/meteo%3A11)baseline grid 12.5 km (HPC Velebit, EURO-CORDEX downscaled reanalysis) Include climate projections (see note after the table)                                | Derive indicators of extreme heat and heatwaves                           | [Climate indicators for Europe from 1940 to 2100](https://cds.climate.copernicus.eu/datasets/sis-ecde-climate-indicators?tab=overview) derived from reanalysis and climate projections (0.25°)                                                               |
+| Windstorm hazard             | [DHMZ ](https://meteo.hr/index_en.php)– Krapina Main Meteorological Station (wind speed, 1994–2020)                                                                                                                                | Characterize occurrence and intensity of wind hazards                     | <p><a href="https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land?tab=download">ERA5-Land hourly data from 1950 to present</a></p><p>(5 km)</p>                                                                                                    |
+| Windstorm hazard             | <p><a href="https://repozitorij.meteo.hr/en/islandora/object/meteo%3A11">RegCM4 </a>baseline grid 12.5 km (HPC Velebit, EURO-CORDEX downscaled reanalysis)</p><p> </p><p>Include climate projections (see note after the table</p> | Characterize occurrence and intensity of wind hazards                     | [Climate indicators for Europe from 1940 to 2100](https://cds.climate.copernicus.eu/datasets/sis-ecde-climate-indicators?tab=overview) derived from reanalysis and climate projections (0.25°)                                                               |
+| Exposure – Population        | Local statistical datasets (county census; Croatian) may be restricted                                                                                                                                                             | Quantify people potentially affected                                      | <p><a href="https://dx.doi.org/10.5258/SOTON/WP00646">World pop Hub</a> (raster 100m)  </p><p></p><p><a href="https://data.humdata.org/dataset/croatia-high-resolution-population-density-maps-demographic-estimates">The Humanitarian Data Exchange</a></p> |
+| Exposure – Built environment | [DGU GIS portal](https://geoportal.dgu.hr/?utm_source=chatgpt.com#/menu/podaci-i-servisi) (may be limited to registered users)                                                                                                     | Identify exposed assets and infrastructure                                | OpenStreetMap building layer ([vector, global)](https://osmbuildings.org/)                                                                                                                                                                                   |
+| Administrative boundaries    | [DGU GIS portal](https://geoportal.dgu.hr/?utm_source=chatgpt.com#/menu/podaci-i-servisi) (may be limited to registered users)                                                                                                     | Isolate area/city of interest                                             | [gadm.org](https://gadm.org/download_country.html)                                                                                                                                                                                                           |
 
 _Table 2 – used data, alternative datasets to replicate the assessment outside the study area_
 
-Climate change effects:
+{% hint style="info" %}
+**⮚   Climate change effects**
 
-* Future risk assessment integrates RegCM4 (12.5 km, EURO-CORDEX/Med-CORDEX) and Copernicus climate indicators (0.25°) under RCP4.5 and RCP8.5 for near future (2011–2040) and mid-century (2041–2070). National datasets provide finer detail; European datasets provide pre-aggregated indicators ready for CRA workflows.
+_Future risk assessment integrates climate projections from_ [_RegCM4_ ](https://repozitorij.meteo.hr/en/islandora/object/meteo%3A11) _(12.5 km resolution, EURO-CORDEX/Med-CORDEX) and Copernicus climate indicators (0.25°). These provide annual indicators and time series under RCP 4.5 and RCP 8.5 for the near future (2011–2040) and mid-century (2041–2070). While national datasets (e.g., RegCM4) provide finer spatial and temporal detail, European datasets offer pre-aggregated indicators, simplifying their direct use in CRA workflows_
+{% endhint %}
 
-Note – Flood hazard maps:
+{% hint style="warning" %}
+<mark style="color:$warning;">**Note – Flood hazard maps**</mark>\
+&#xNAN;_<mark style="color:$warning;">**The flood hazard component here relies on large-scale European products, which mainly represent fluvial flooding at coarse resolution. More accurate pluvial and riverine flood risk maps should be included whenever available from national or regional agencies. Users seeking high-resolution analysis can refer to dedicated tutorials on flood modelling, which use local DEMs and hydrological data.**</mark>_
 
-* Large-scale European products mainly represent fluvial flooding at coarse resolution. Include more accurate pluvial and riverine maps from national/regional agencies when available.
+&#x20;
+{% endhint %}
+
+Given the orientation of this tutorial toward climate risk assessment based on time-series and geospatial data, the main operational requirement is a GIS platform. In practice, beyond the use of standard office suites or spreadsheets for tabular data management, GIS is the only tool strictly necessary to implement the workflow described here.
+
+Some operations (e.g., raster aggregation, downscaling, or customized indicator computation from high-frequency data) can be automated through simple scripting using libraries such as GDAL or CDO. However, such tasks fall outside the scope of this tutorial, which focuses on demonstrating the CRA workflow through existing, user-friendly tools.
+
+<figure><img src="../.gitbook/assets/CRO-Krapina-Zagorje_draft2_media_image6.png" alt=""><figcaption><p><em>Figure 6 - Comparison of spatial resolution and processing level between national and European datasets. Left: near-surface air temperature (TAS, 2 m) from the Croatian RegCM4 regional climate model at ~12.5 km resolution, shown here as a raw climate variable with sub-daily (3-hourly) time steps. Right: annual hot days indicator (number of days with Tmax > 30 °C) from the Copernicus Climate Indicators dataset at 0.25° resolution (~25 km). The figure highlights both the finer spatial detail of the national dataset and the advantage of the European dataset in providing pre-aggregated annual indicators ready for risk assessment. (note that also EU based dataset like ERA5-Land hourly data may provide higher resolution).</em></p></figcaption></figure>
 
 Tools:
 
@@ -143,15 +155,33 @@ _Table 3 – used tools and role in the Multi-Hazard CRA Workflow_
 {% step %}
 ### Step 1 — Data acquisition and preparation
 
-* Load multiband raster files containing annual climate indicators (pre-computed annual statistics: yearly counts, annual maxima, annual extremes). Each band represents a year (temporal stack).
-* Clip raster layers to the study area using administrative boundaries.
-* Selected illustrative indicators:
-  * Heat hazard → Hot days (days with Tmax > 30 °C)
-  * Precipitation hazard → Extreme precipitation days (days above the 95th percentile, 1981–2010)
-  * Wind hazard → Extreme wind speed days (days above the 98th percentile, 1981–2010)
-  * Flood hazard → River flood depth maps (e.g., 100-year return period)
-* Extract time series for pixels or polygons of interest and export to CSV from QGIS (e.g., using the Value Tool plugin).
-* Note: For local station data or higher-frequency datasets (RegCM4, ERA5-Land hourly), derive indicators from sub-daily rasters—this typically requires scripting (GDAL, CDO).
+*   In this step we focus on climate indicators available in harmonized European datasets that correspond directly to those recommended by the IVAVIA methodology.
+
+    The workflow begins by loading into a GIS platform the multiband raster file containing annual climate indicators of interest. Although provided on a relatively coarse 0.25° grid, these datasets already deliver pre-computed annual statistics such as yearly counts (e.g., number of hot days), annual maxima (e.g., maximum 5-day precipitation), or annual extremes (e.g., extreme wind speed days). Each band represents a year, allowing the raster to be handled as a temporal stack. Importantly, these are not long-term means, but annual statistics derived from daily climate data, making them consistent with IVAVIA’s requirements.
+
+    Raster layers are then clipped to the study area using administrative boundaries (from national or open European shapefiles). For this tutorial, four indicators have been selected among the many available and indicated in the IVAVIA guidelines just for the sake of two illustrating the methodology:
+
+    &#x20;
+
+    ●    Heat hazard → Hot days (days with Tmax > 30 °C)
+
+    ●    Precipitation hazard → Extreme precipitation days (days above the 95th percentile, 1981–2010)
+
+    ●    Wind hazard → Extreme wind speed days (days above the 98th percentile, 1981–2010)
+
+    ●    Flood hazard → River flood depth maps from JRC datasets (e.g., 100-year return period)
+
+    &#x20;
+
+    These indicators are extracted as time series for any pixel of interest (e.g., the area covering Hum na Sutli or Zagreb or another area ) and can be exported to CSV format directly from QGIS using available plugins such as [_Value Tool_](https://plugins.qgis.org/plugins/valuetool/). Figure 5 shows an example of population density grids and building footprints overlaid with flood hazard data, while Figure 6 illustrates time series extracted from current and projected climate datasets.
+
+<figure><img src="../.gitbook/assets/CRO-Krapina-Zagorje_draft2_media_image9merge.png" alt=""><figcaption><p><em>Figure 7 – Example of exposure and flood hazard integration. Left: raster map of population density for a selected age group (100 m resolution) overlaid with building footprint polygons in an urban area of the Krapina–Zagorje region. Right: building footprint polygons overlaid with the 100-year flood extent from the JRC European river flood hazard dataset. Together, these maps illustrate how demographic, structural, and hazard layers can be combined in GIS to represent exposure to climate risks, in line with the IVAVIA methodology.</em></p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/CRO-Krapina-Zagorje_draft2_media_image8_merge2.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/CRO-Krapina-Zagorje_draft2_media_image24.png" alt=""><figcaption><p><em>Figure 8 – Extracted time series of meteorological indicators in current and climate change projection (example of extracted time series in the lower table)</em></p></figcaption></figure>
+
+
 {% endstep %}
 
 {% step %}

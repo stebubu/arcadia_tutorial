@@ -6,35 +6,37 @@
 
 The [Krapina-Zagorje County](https://en.wikipedia.org/wiki/Krapina-Zagorje_County), in northwestern Croatia near the Slovenian border, is predominantly rural with dispersed settlements, agricultural land, and forested hills, alongside small urban centres providing regional services. Two Innovation Labs serve as focal points for local experimentation with Nature-Based Solutions (NbS): the City of Zabok (urban greening and the reGENERATOR cultural hub) and the Hum na Sutli – Pregrada – Desinić area (slope stabilisation and erosion prevention in landslide-prone terrain).
 
-> Figure 1 Center for urban culture reGENERATOR in the City of Zabok, (c) [Grad Zabok](https://www.zabok.hr/re-generator/)
+<figure><img src="../.gitbook/assets/CRO-Krapina-Zagorje_draft2_media_image8.png" alt=""><figcaption><p><em>Figure 1 Center for urban culture reGENERATOR in the City of Zabok, (c)</em> <a href="https://www.zabok.hr/re-generator/"><em>Grad Zabok</em></a></p></figcaption></figure>
 
-[Zagreb](https://en.wikipedia.org/wiki/Zagreb), Croatia’s capital and largest urban area, provides a contrasting metropolitan context: dense urban development, critical infrastructure, and strong demographic/economic dynamics. The Zagreb Innovation Lab addresses NbS for urban microclimate regulation, stormwater management, and resilience of public spaces—complementing the rural/small-town setting of Krapina-Zagorje and illustrating regional diversity.
+[Zagreb](https://en.wikipedia.org/wiki/Zagreb), Croatia’s capital and largest urban area, provides a contrasting metropolitan context. With dense urban development, critical infrastructure, and strong demographic and economic dynamics, the Zagreb Innovation Lab addresses **NbS for urban microclimate regulation, stormwater management, and resilience of public spaces**. Its focus complements the more rural and small-town setting of Krapina-Zagorje, together illustrating the diversity of regional challenges.
 
-_Figure 2 Therapeutic garden established as part of the proGIreg project at the co-Innovation lab Sljeme, Sesvete, (c)_ [_proGIreg_](https://progireg.eu/fileadmin/user_upload/Zagreb/ProGIreg_NBS3_Therapy_Garden_Zagreb.pdf)
+<figure><img src="../.gitbook/assets/CRO-Krapina-Zagorje_draft2_media_image14.png" alt=""><figcaption><p><em>Figure 2 Therapeutic garden established as part of the proGIreg project at the co-Innovation lab Sljeme, Sesvete, (c)</em> <a href="https://progireg.eu/fileadmin/user_upload/Zagreb/ProGIreg_NBS3_Therapy_Garden_Zagreb.pdf"><em>proGIreg</em></a></p></figcaption></figure>
 
-_Figure 3 Former slaughterhouse and livestock market Zagrepčanka, City of Zagreb, (c)_ [_Grad Zagreb_](https://www.zagreb.hr/zagrepcanka/173671)
+<figure><img src="../.gitbook/assets/CRO-Krapina-Zagorje_draft2_media_image6.jpg" alt=""><figcaption><p><em>Figure 3 Former slaughterhouse and livestock market Zagrepčanka, City of Zagreb, (c)</em> <a href="https://www.zagreb.hr/zagrepcanka/173671"><em>Grad Zagreb</em></a></p></figcaption></figure>
+
+
 
 Climatic conditions across both regions reflect continental patterns with marked seasonality in temperature and precipitation. Historical records highlight variability in rainfall intensity, heat extremes, and local wind events, while flood hazard maps delineate areas vulnerable to riverine and pluvial flooding.
 
-This Climate Risk Assessment (CRA) focuses on three main hazards—floods, heatwaves, and windstorms—to illustrate the methodology through a simplified tutorial example. These hazards were selected for their relevance to demographic, infrastructural, and environmental vulnerabilities and because they can be consistently assessed with harmonized datasets. This selection does not exhaust the full range of relevant hazards (e.g., droughts, fires, erosion, biodiversity impacts, health, tourism, infrastructure impacts) which should be considered in comprehensive regional assessments.
+The Climate Risk Assessment (CRA) presented here focuses on **three main hazards—floods, heatwaves, and windstorms**—to illustrate the methodology through a simplified tutorial example. These hazards were selected because they capture some of the most relevant interactions with demographic, infrastructural, and environmental vulnerabilities, and can be consistently assessed with harmonized datasets. However, this does **not exhaust the full range of climate hazards** relevant to the Krapina-Zagorje and Zagreb regions. As highlighted in the original CRA documents and the IVAVIA methodology, additional hazards such as droughts, fires, erosion, and impacts on biodiversity, health, tourism, and infrastructure may also play a critical role and should be considered in comprehensive regional assessments.
 
-_Figure 4 - model regions and the Krapina-Zagorje and Zagreb area._
+<figure><img src="../.gitbook/assets/CRO-Krapina-Zagorje_draft2_media_image5.png" alt=""><figcaption><p><em>Figure 4 - model regions and the Krapina-Zagorje and Zagreb area.</em></p></figcaption></figure>
 
 #### Scope of the tutorial
 
-This tutorial presents a simplified and replicable CRA workflow for two Croatian regions—Krapina-Zagorje County and the City of Zagreb—focusing on three cross-regional hazards: floods, heatwaves, and windstorms.
+This tutorial presents a simplified and replicable Climate Risk Assessment (CRA) workflow for two Croatian regions—**Krapina-Zagorje County** and the **City of Zagreb**—as part of broader climate change mitigation and adaptation efforts. For demonstration purposes, the CRA focuses on **three hazards of cross-regional relevance: floods, heatwaves, and windstorms**.
 
-The workflow combines meteorological time series, European climate indicators (Copernicus), regional modelling outputs (RegCM4), and flood probability maps from the Joint Research Centre. While applied to urban and rural contexts here, the approach is transferable: regions can reproduce the steps by substituting local datasets and adjusting parameters to their hazard profile.
+The workflow combines meteorological time series, European climate indicators (Copernicus), regional modelling outputs (RegCM4), and flood probability maps from the Joint Research Centre. While applied here to selected local contexts (urban and rural), the approach is t**ransferable**: regions can reproduce the steps by substituting local datasets and adjusting parameters to their hazard profile.
 
 {% hint style="info" %}
 Disclaimer
 
-This tutorial is a didactic example and does not replace software-specific documentation (e.g., GIS, hydrological or climate modelling tools). Users should be familiar with basic geospatial data formats, pre-processing techniques, and modelling concepts. The workflow illustrates methodological steps rather than exhaustive operational guidance; comprehensive assessments should integrate additional hazards and sectoral indicators in line with the IVAVIA methodology and stakeholder priorities.
+This tutorial is a **didactic example** and does not replace software-specific documentation (e.g., GIS, hydrological or climate modelling tools). Users should be familiar with basic geospatial data formats, pre-processing techniques, and modelling concepts. The workflow illustrates methodological steps rather than exhaustive operational guidance; comprehensive assessments should integrate additional hazards and sectoral indicators in line with the **IVAVIA methodology** and stakeholder priorities.
 {% endhint %}
 
 #### CRA objectives
 
-The CRA developed for the Krapina-Zagorje and Zagreb regions aims to characterize risks associated with floods, heatwaves, and windstorms using historical meteorological data, European climate indicators, and regional hazard mapping.
+The CRA developed for the **Krapina-Zagorje** and **Zagreb** regions aims to characterize risks associated with **floods, heatwaves, and windstorms** using historical meteorological data, European climate indicators, and regional hazard mapping.
 
 Main objectives:
 
@@ -43,20 +45,17 @@ Main objectives:
 * Provide a structured, evidence-based foundation for regional decision-making and adaptation planning.
 * Support the integration of climate risk considerations into policies and strategies at local and regional level.
 
-This workflow centres on Climate Risk Assessment as a first step to produce robust evidence of climate threats and vulnerabilities, which can then inform, prioritize, and later complement NbS design.
+Unlike other tutorials that focus primarily on **Nature-Based Solutions (NbS) design and evaluation**, this workflow is explicitly cantered on **Climate Risk Assessment as a first step.** The emphasis is on producing **robust evidence of climate threats and vulnerabilities**, which can then serve as a baseline to inform, prioritize, and later complement NbS design.
 
 The CRA applies the [IVAVIA methodology](https://www.researchgate.net/publication/330005248_IVAVIA_Impact_and_Vulnerability_Analysis_of_Vital_Infrastructures_and_Built-Up_Areas_13th_International_Conference_CRITIS_2018_Kaunas_Lithuania_September_24-26_2018_Revised_Selected_Papers), integrating hazard, exposure, sensitivity, and adaptive capacity into a clear and replicable framework.
 
 #### Intended users
 
-Intended users include:
+The Climate Risk Assessment (CRA) developed for the **Krapina-Zagorje** and **Zagreb** regions is designed for a broad spectrum of users involved in climate adaptation and risk management.
 
-* Regional and municipal authorities (spatial planning, infrastructure, local policies).
-* Civil protection agencies (preparedness and emergency response).
-* Policymakers at county and city levels (long-term adaptation strategies).
-* Environmental organizations, research institutions, and NGOs (conservation, sustainability, NbS promotion).
+Regional and municipal authorities can use the results to integrate climate risks into **spatial planning, infrastructure development, and local policies. Civil protection agencies** benefit from the outputs to enhance preparedness and emergency response capacity, while **policymakers** at county and city levels gain an evidence base for designing long-term adaptation strategies.
 
-The CRA provides a structured, data-driven foundation for decision-making in both urban (Zagreb) and rural (Krapina-Zagorje) contexts.
+The CRA is also relevant for **environmental organizations, research institutions, and NGOs**, which can apply the findings to support conservation, sustainability initiatives, and the promotion of nature-based approaches. In both urban (Zagreb) and rural (Krapina-Zagorje) contexts, the CRA provides a **structured, data-driven foundation** for decision-making, ensuring that adaptation measures are tailored to the vulnerabilities and priorities of the regions.
 
 ***
 
@@ -64,9 +63,13 @@ The CRA provides a structured, data-driven foundation for decision-making in bot
 
 #### Description and context
 
-This IVAVIA-based workflow covers both Krapina-Zagorje and Zagreb regions. The CRA focuses on floods, heatwaves, and windstorms. The workflow integrates climate data with socio-economic information to support adaptation planning.
+The Integrated Multi-Hazard Climate Risk Assessment Workflow (IVAVIA-based) presented here covers both the **Krapina-Zagorje** and **Zagreb** regions. While the former is a predominantly rural inland county with dispersed settlements, agricultural land, and forested hills, and the latter a major urban centre with dense built-up areas and critical infrastructures, both regions are increasingly exposed to climate-related risks.
 
-Key indicators selected for illustrative purposes:
+In this tutorial, the Climate Risk Assessment (CRA) focuses on three hazards of primary concern: **floods, heatwaves, and windstorms**.  These hazards interact with local vulnerabilities in demographic, infrastructural, and environmental systems, shaping overall exposure and risk. The workflow provides a structured basis for integrating climate data with socio-economic information to support adaptation planning.
+
+&#x20;The table below summarizes the **key indicators** selected for illustrative purposes at this stage. It serves as an introductory overview; the detailed calculation of each indicator is developed in the methodology section of the workflow.
+
+***
 
 | Dimension    | Indicator(s)                                            | Unit                                  | Purpose                                                             |
 | ------------ | ------------------------------------------------------- | ------------------------------------- | ------------------------------------------------------------------- |
@@ -80,17 +83,25 @@ _Table 1 – key indicators tracked — multi-hazard CRA_
 
 #### Data sources and tools
 
-CRA relies on meteorological observations, hazard maps, and geospatial datasets describing exposure and vulnerability.
+The Climate Risk Assessment (CRA) for the Krapina–Zagorje and Zagreb regions relies on a combination of **meteorological observations, hazard maps, and geospatial datasets** describing exposure and vulnerability.
 
-* Historical climate data: Croatian Meteorological and Hydrological Service (DHMZ) — daily/monthly temperature, precipitation, wind speed.
-* Flood hazard: national flood probability maps; European products from JRC and Copernicus where local access is restricted.
-* Exposure layers: population density grids (census or WorldPop), building footprints (DGU portal or OpenStreetMap), administrative boundaries (national registries or GADM).
+**Historical climate data** are provided by the Croatian Meteorological and Hydrological Service (DHMZ), with daily and monthly values of temperature, precipitation, and wind speed. These allow the derivation of indicators such as hot days, extreme precipitation, and windstorm intensity. (Figure 3)
 
-Vulnerability is addressed through socio-economic indicators and adaptive capacity proxies; this tutorial includes simplified examples.
+**Flood hazard information** is supported by national flood probability maps, complemented—where local access is restricted—by European-scale products from JRC and Copernicus.
 
-_Figure 5 – example of precipitation monitoring stations network, source_ [_DMZH_](https://meteo.hr/infrastruktura_e.php?section=mreze_postaja\&param=pmm\&el=kisomjerne)
+&#x20;**Exposure layers** include **population density grids** (from census or global datasets such as World Pop) and **building footprints** (from the DGU portal or OpenStreetMap). Administrative boundaries from national registries or global sources (e.g., GADM) delineate the study areas.
+
+In line with the IVAVIA methodology, vulnerability is addressed through socio-economic indicators and adaptive capacity proxies, **though in this tutorial only simplified examples are included**.
+
+<figure><img src="../.gitbook/assets/CRO-Krapina-Zagorje_draft2_media_image12.png" alt=""><figcaption><p><em>Figure 5 – example of precipitation monitoring statins network in the area , source</em> <a href="https://meteo.hr/infrastruktura_e.php?section=mreze_postaja&#x26;param=pmm&#x26;el=kisomjerne"><em>DMZH</em></a></p></figcaption></figure>
+
+
 
 Datasets for a hybrid workflow:
+
+{% hint style="info" %}
+
+{% endhint %}
 
 * The tutorial adopts a hybrid workflow combining GIS-based spatial layers (flood maps, population, buildings) with non-spatial outputs (composite indicators, charts, time series). Examples mainly use openly available European datasets (Copernicus, ERA5-Land); national datasets should replace them where available.
 

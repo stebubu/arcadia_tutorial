@@ -346,9 +346,9 @@ _Table 7 - Wind Hazard (Extreme Wind Speed Days)_
 
 _Table 8 - Precipitation Hazard (Extreme Precipitation Days)_
 
+<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Dimension</td><td valign="top">Indicator</td><td valign="top">Normalized Value</td><td valign="top">Composite Score</td></tr><tr><td valign="top">Hazard</td><td valign="top">Mean flood depth (100-yr return period)</td><td valign="top">0.37</td><td valign="top">H = 0.37</td></tr><tr><td valign="top">Sensitivity</td><td valign="top">Share of ground-floor residential area</td><td valign="top">0.54</td><td valign="top"> </td></tr><tr><td valign="top">Adaptive Capacity</td><td valign="top">Flood defences, emergency readiness (assumed)</td><td valign="top">0.30</td><td valign="top">V = (0.54+(1-0.30))/2 = 0.62</td></tr><tr><td valign="top">Exposure</td><td valign="top">Share of population/buildings in flood zone</td><td valign="top">0.25</td><td valign="top">EX = 0.25</td></tr><tr><td valign="top">Risk</td><td valign="top">Composite Risk Score</td><td valign="top"> </td><td valign="top">R = (0.37+0.62+0.25)/3 = 0.413</td></tr></tbody></table>
 
 
-_Table 9 - Flood Hazard (River Flood Depth Maps)_
 {% endstep %}
 {% endstepper %}
 
@@ -356,88 +356,111 @@ _Table 9 - Flood Hazard (River Flood Depth Maps)_
 
 #### Outputs and visualizations
 
-Effective communication requires visual outputs:
+In addition to tabular calculations, this CRA workflow highlights the importance of **visual outputs for effective communication of results.** Graphs and maps make trends and spatial patterns accessible to both experts and non-specialist stakeholders, bridging the gap between technical analysis and decision-making.
 
-* Time-series plots: show temporal evolution of hazard indicators under historical and RCP scenarios (e.g., hot days, extreme precipitation days, wind extremes).
-* Geospatial maps: display spatial distribution of risks, flood hazard overlaid with population or building footprints to identify vulnerable hotspots.
-* Composite maps: integrate multiple hazards, sensitivity, and adaptive capacity to reveal cross-sectoral vulnerabilities.
+&#x20;**Time-series** plots illustrate the temporal evolution of hazard indicators (e.g., hot days, extreme precipitation days, wind extremes) under historical and RCP8.5 scenarios. They enable comparison of baseline and projected conditions, making the dynamics of climate risk more tangible. In this example, two indicators—frequency of extreme precipitation days and hot days—show a marked upward trend, underlining the urgency of adaptation and mitigation measures.
 
-Adjusting climate trends with local data:
+&#x20;**Geospatial maps** complement this temporal perspective by showing the spatial distribution of risks. Flood hazard maps combined with exposure layers (e.g., population grids or building footprints) identify vulnerable hotspots, supporting emergency preparedness and prioritization of adaptation measures. More complex composite maps can integrate multiple hazards, sensitivity, and adaptive capacity, helping to capture cross-sectoral vulnerabilities.
 
-* Statistical downscaling (e.g., quantile mapping, Quantile Delta Mapping, QPLAD) can correct biases and downscale large-scale datasets to local contexts without distorting trends in extremes (see Gergel et al., 2024).
+&#x20;
 
-_Figure 10 - Combined plots comparing historical reanalysis with RCP8.5 projections._
+{% hint style="info" %}
+**⮚     Adjusting climate trends with local data**
 
-_Figure 11 - Example geospatial map displaying hazard zones such as flood risk maps._
+Many global or regional reanalysis or observational datasets (e.g., ERA5) overlap in time with future model projections (e.g., CMIP6). This overlap allows for statistical downscaling — particularly, quantile mapping techniques — to adjust large-scale datasets to local contexts while preserving climate change signals and extreme tails. Recent studies using _Quantile Delta Mapping (QDM)_ and models like _Quantile-Preserving Localized-Analog Downscaling (QPLAD)_ demonstrate that it is possible to correct biases and downscale climate variables without distorting trends in extremes( see also [Gergel, D. R. et. Ala, 2024](https://gmd.copernicus.org/articles/17/191/2024))
+{% endhint %}
 
-_Figure 12 - Example maps: flood, erosion, fire, landslide risk._
+<figure><img src="../.gitbook/assets/CRO-Krapina-Zagorje_draft2_media_image15.png" alt=""><figcaption><p><em>Figure 10 - Combined plots of Hot Days (top), Extreme Wind Speed Days (middle), and Frequency of Extreme Precipitation Days (bottom), comparing historical reanalysis data with climate change projections under RCP 8.5 (Copernicus datasets). The shaded rectangle highlights the temporal overlap between reanalysis and projection datasets, which can be exploited for statistical downscaling methods (e.g., quantile mapping). The figures show a clear upward trend for heat- and precipitation-related indicators, supporting the need for targeted adaptation strategies.</em></p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/CRO-Krapina-Zagorje_draft2_media_image19.png" alt=""><figcaption><p><em>Figure 11- example of geospatial map Displaying hazard zones such as flood risk maps</em></p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/CRO-Krapina-Zagorje_draft2_media_image18_merge.png" alt=""><figcaption><p><em>Figure 12 - Example maps: flood, erosion, fire, landslide risk.</em></p></figcaption></figure>
+
+
 
 ***
 
 ### Annex — Sectoral Climate Risk Models (Zagreb case study examples)
 
-This annex summarises sectoral examples of hazard, exposure, sensitivity, and adaptive capacity indicators used in the Zagreb CRA (IVAVIA-based). Tables illustrate how these indicators combine into vulnerability and risk indices. These are illustrative and should be adapted to local datasets and stakeholder inputs.
+This annex reports sectoral examples of climate hazard and risk models as developed in the Zagreb Climate Risk Assessment, based on the IVAVIA methodology (RESIN project). These examples illustrate how hazard, exposure, sensitivity, and adaptive capacity indicators can be combined into composite vulnerability and risk indices.
 
-Example risk elements and indicators (selected highlights):
+&#x20;The tables reproduced here summarize, for each sector, examples of relevant indicators of **hazard (H), exposure (EX), sensitivity (SE), and adaptive capacity (AC)**. Their aggregation into **vulnerability (V)** and final **risk (R)** scores follows the methodological framework described in Chapter 5 of the IVAVIA guidelines.
 
-* Threat (hazard): IPCC scenarios RCP4.5/RCP8.5; change in Tmax, warm nights, very hot days, consecutive dry/rainy days, days with heavy precipitation (>20 mm), Rx1d.
-* Exposure: population density, road/rail infrastructure, hospitals, industrial facilities, waste sites.
-* Sensitivity: number of inhabitants, youth/elderly population, settlement density, projected demographic changes.
-* Adaptive capacity: hospitals/doctors per capita, proportion of green areas, length of levees, education level, GDP per capita.
+&#x20;The annexed tables are provided as illustrative examples and complement the simplified tutorial workflow developed for the Krapina–Zagorje and Zagreb regions. They show how sectoral detail can be introduced in operational CRAs when more granular datasets and local expertise are available.
 
-Sector examples (selected):
+{% hint style="info" %}
+**⮚     Example: Water Management – Flood Risk and Vulnerability**
 
-Water Management — Floods
+The final table attached in this annex presents a structured example of calculation for the Water Management sector, focused on flood hazard. Normalized values are shown for hazard, sensitivity, adaptive capacity, and exposure indicators, together with the composite vulnerability score and overall risk rating.
 
-* Hazard: Rx1d, days >20 mm, consecutive rainy days.
-* Exposure: population density, water supply connections, length of drainage network.
-* Sensitivity: past flood occurrence, water safety.
-* Adaptive capacity: flood defences, readiness, drainage functionality, integrated urban stormwater management.
+This structured calculation demonstrates the logic of the IVAVIA framework:
 
-Agriculture — Drought & Floods
+●        Hazard intensity (frequency of extreme rainfall, maximum daily precipitation) is quantified and normalized.
 
-* Hazard: Tmax, very hot days, consecutive dry days; heavy precipitation indicators for floods.
-* Exposure: number of agricultural holdings, ARKOD area share, employment in agriculture.
-* Sensitivity: crop distribution, soil quality, estimated economic damage.
-* Adaptive capacity: irrigation availability, institutional/financial support, farmers’ education.
+●        Sensitivity includes past flood occurrences and infrastructure fragility.
 
-Forestry — Fire & Storm
+●        Adaptive capacity reflects the state of flood defenses, drainage, and preparedness of services.
 
-* Hazard: Tmax, very hot days, consecutive dry days, Storm event frequency.
-* Exposure: forest areas, parks, employment in forestry.
-* Sensitivity: SSR fire severity index, area at high fire danger, forest age/health.
-* Adaptive capacity: institutional capacity, density of firebreaks, fire protection plans, forest maintenance.
+●        Exposure measures the density of population and infrastructure within the flood-prone area.
 
-Health — Heatwave
+●        Vulnerability is aggregated as a function of sensitivity and coping capacity.
 
-* Hazard: average daily temperature, hot days, tropical nights.
-* Exposure: population density, workers in outdoor occupations, sensitive institutions.
-* Sensitivity: built-up area, share of sensitive age groups, vulnerable population share.
-* Adaptive capacity: share of urban green/blue infrastructure, healthcare availability, emergency coverage, heatwave warning systems.
+●        The final risk rating integrates hazard, exposure, and vulnerability.
+{% endhint %}
 
-Buildings, Transport, Energetics, Tourism, Biodiversity — similar sector-specific indicators described in the original annex.
+<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">RISK ELEMENTS</td><td valign="top">DESCRIPTION</td><td valign="top">INDICATORS</td></tr><tr><td valign="top">Threat (hazard)</td><td valign="top"><p>●        Drought</p><p>●        Flood</p><p>●        Storm</p><p>●        Heatwave</p><p>●        Fire</p></td><td valign="top"><p>IPCC Scenarios: RCP 4.5 and RCP8.5 for the period 2040–2070 compared to the period 1980–2010.</p><p>●        Change in mean maximum temperature (°C)</p><p>●        Change in the number of warm nights (Tmin ≥ 20 °C)</p><p>●        Change in the number of very hot days (Tmax ≥ 30 °C)</p><p>●        Change in the number of consecutive dry days (precipitation &#x3C; 1 mm)</p><p>●        Change in the number of consecutive rainy days (precipitation > 1 mm)</p><p>●        Change in the number of days with heavy precipitation (> 20 mm)</p><p>●        Change in the maximum 1-day precipitation (Rx1d)</p><p>●        Erosion</p></td></tr><tr><td valign="top">Exposure</td><td valign="top">Exposure of people and infrastructure to potential future climate impacts.</td><td valign="top"><p>●        Population density in settlements</p><p>●        Road and railway infrastructure                  </p><p>●        Hospitals and health center</p><p>●        Industrial facilities</p><p>●        Waste disposal sites</p></td></tr><tr><td valign="top">Sensitivity</td><td valign="top">Socio-economic data that may be affected by climate change hazards. Indicators should reflect changes over time.</td><td valign="top"><p>●        Number of inhabitants</p><p>●        Youth population</p><p>●        Elderly population</p><p>●        Settlement density</p><p>●        Projected changes in population and migration</p></td></tr><tr><td valign="top">Adaptation capacity</td><td valign="top">Data related to the capacity to adapt to the occurrence of hazards, which can reflect changes over time.</td><td valign="top"><p>●        Number of hospitals/doctors per capita</p><p>●        Proportion of green areas in cities</p><p>●        Length of built levees</p><p>●        Level of public education</p><p>●        GDP per capita</p></td></tr></tbody></table>
 
-Example composite risk summary for Water Management (illustrative):
+Table 10 - an example of risk elements and indicators that were used in the CRA
 
-| Element                              | Normalized Indicator Value |
-| ------------------------------------ | -------------------------- |
-| H: consecutive rainy days            | 0.54                       |
-| H: days >20 mm                       | 0.59                       |
-| H: Rx1d                              | 0.52                       |
-| SE: occurrence of floods             | 1.00                       |
-| SE: safety and water quality         | 0.10                       |
-| SE: households w/o water supply      | 0.03                       |
-| AC: flood protection system          | 0.50                       |
-| AC: readiness                        | 0.10                       |
-| AC: drainage functionality           | 0.80                       |
-| AC: integrated stormwater management | 0.70                       |
-| Composite V (f(SE,AC))               | 0.45                       |
-| EX: population density               | 1.00                       |
-| EX: water supply connections         | 0.97                       |
-| EX: drainage length in flood area    | 0.45                       |
-| Overall risk rating (R = f(H,V,EX))  | 0.60                       |
+Below are the models that were used in the CRA for analyzed sectors:
 
-_Table 11 - Example composite risk calculation following IVAVIA (illustrative values)._
+**WATER MANAGMENT**
+
+<table data-header-hidden><thead><tr><th></th><th valign="top"></th></tr></thead><tbody><tr><td>HAZARD: FLOODS</td><td valign="top"><p>●        Maximum 1-day precipitation (Rx1d)</p><p>●        Number of days with heavy rainfall (> 20 mm)</p><p>●        Number of consecutive rainy days (precipitation > 1 mm)</p></td></tr><tr><td>EXPOSURE</td><td valign="top"><p>●        population density (number of inhabitants/km²)</p><p>●        number of water supply connections</p><p>●        length of the public drainage network in the area affected by flooding</p></td></tr><tr><td>SENSITIVITY</td><td valign="top"><p>●        occurrence of floods in the area of the City of Zagreb</p><p>●        safety of water intended for human consumption</p><p>●        percentage of households without a water supply network</p></td></tr><tr><td>ADAPTATION CAPACITY</td><td valign="top"><p>●        flood defense system</p><p>●        assessment of the readiness of flood protection services</p><p>●        functionality of the public drainage system</p><p>●        integrated approach to managing urban stormwater drainage</p></td></tr></tbody></table>
+
+<table data-header-hidden><thead><tr><th></th><th valign="top"></th></tr></thead><tbody><tr><td>HAZARD: DROUGHT</td><td valign="top"><p>●        average maximum daily air temperature</p><p>●        number of very hot days (Tmax ≥ 30 °C)</p><p>●        number of consecutive dry days (precipitation &#x3C; 1 mm)</p></td></tr><tr><td>EXPOSURE</td><td valign="top"><p>●        population density (number of inhabitants/km²)</p><p>●        number of water supply connections</p><p>●        increase in the number of water consumers during peak summer tourist months</p></td></tr><tr><td>SENSITIVITY</td><td valign="top"><p>●        average annual water consumption</p><p>●        losses in the water supply network</p><p>●        quantitative status of groundwater</p></td></tr><tr><td>ADAPTATION CAPACITY</td><td valign="top"><p>●        level of education of the population</p><p>●        sustainable water management</p><p>●        regulations on water use restrictions</p></td></tr></tbody></table>
+
+**AGRICULTURE**
+
+<table data-header-hidden><thead><tr><th></th><th valign="top"></th></tr></thead><tbody><tr><td><mark style="background-color:$warning;">HAZARD: DROUGHT</mark></td><td valign="top"><p>●        average maximum daily air temperature</p><p>●        number of very hot days (Tmax ≥ 30 °C)</p><p>●        number of consecutive dry days (precipitation &#x3C; 1 mm)</p></td></tr><tr><td>EXPOSURE</td><td valign="top"><p>●        number of agricultural holdings</p><p>●        share of ARKOD areas in the total area of the City</p><p>●        share of employees in the agriculture sector relative to total employment</p></td></tr><tr><td>SENSITIVITY</td><td valign="top"><p>●        structure of agricultural land and distribution of drought-sensitive crops</p><p>●        soil quality, i.e., the percentage of humus content in the soil</p><p>●        estimated material damage in the economy as a percentage of the budget</p></td></tr><tr><td>ADAPTATION CAPACITY</td><td valign="top"><p>●        availability of water for irrigation</p><p>●        institutional and financial support for farmers</p><p>●        level of education of farmers</p><p>●        age structure of farmers</p><p>●        GDP per capita (financial capacity for using modern technologies)</p></td></tr></tbody></table>
+
+<table data-header-hidden><thead><tr><th></th><th valign="top"></th></tr></thead><tbody><tr><td><mark style="background-color:blue;">HAZARD: FLOODS</mark></td><td valign="top"><p>●        number of consecutive rainy days (precipitation > 1 mm)</p><p>●        number of days with heavy precipitation (> 20 mm)</p><p>●        highest 1-day precipitation amount (Rx1d)</p></td></tr><tr><td>EXPOSURE</td><td valign="top"><p>●        area of agricultural land at risk of flooding</p><p>●        area of agricultural land at risk of erosion</p><p>●        number of agricultural holdings</p></td></tr><tr><td>SENSITIVITY</td><td valign="top"><p>●        estimated material damage in the economy (%)</p><p>●        soil water retention capacity</p></td></tr><tr><td>ADAPTATION CAPACITY</td><td valign="top"><p>●        existing flood defense systems</p><p>●        existing green infrastructure</p><p>●        drainage systems</p></td></tr></tbody></table>
+
+**FORESTRY**
+
+<table data-header-hidden><thead><tr><th></th><th valign="top"></th></tr></thead><tbody><tr><td>HAZARD: FIRE</td><td valign="top"><p>●        average daily maximum air temperature</p><p>●        number of very hot days (Tmax ≥ 30 °C)</p><p>●        number of consecutive dry days (precipitation &#x3C; 1 mm)</p></td></tr><tr><td>EXPOSURE</td><td valign="top"><p>●        areas covered by forest land and urban parks</p><p>●        share of employees in forestry relative to total employment</p></td></tr><tr><td>SENSITIVITY</td><td valign="top"><p>●        SSR index of average seasonal fire severity</p><p>●        area of forests affected by a high level of fire danger (ha)</p><p>●        age of forests (ha)</p><p>●        burned area in the recent period (ha)</p><p>●        forest management</p></td></tr><tr><td>ADAPTATION CAPACITY</td><td valign="top"><p>●        existence of institutional and technical capacity for preventing, managing, and restoring forest fires</p><p>●        sufficient spatial density of firebreaks</p><p>●        existence of an annual forest and urban park fire protection plan</p></td></tr></tbody></table>
+
+<table data-header-hidden><thead><tr><th></th><th valign="top"></th></tr></thead><tbody><tr><td>HAZARD: STORM</td><td valign="top">●        increase in the number of storm events</td></tr><tr><td>EXPOSURE</td><td valign="top">●        areas covered by forest land, urban forests, city parks, tree-lined avenues, gardens, and individual trees</td></tr><tr><td>SENSITIVITY</td><td valign="top"><p>●        age of the forest</p><p>●        health condition of the forest</p><p>●        biodiversity of the forest</p><p>●        tree species present</p><p>●        forest stand density</p></td></tr><tr><td>ADAPTATION CAPACITY</td><td valign="top"><p>●        forest maintenance (private/state)</p><p>●        planting plan (particularly regarding tree species selection) and management of urban forests</p></td></tr></tbody></table>
+
+**HEALTH**
+
+<table data-header-hidden><thead><tr><th></th><th valign="top"></th></tr></thead><tbody><tr><td>HAZARD: HEATHWAVE</td><td valign="top"><p>●        average daily air temperature</p><p>●        number of hot days (Tmax ≥ 30 °C)</p><p>●        number of tropical nights (Tmin > 20 °C)</p></td></tr><tr><td>EXPOSURE</td><td valign="top"><p>●        average population density (number of inhabitants/km²)</p><p>●        number of employees in occupations exposed to atmospheric influences (agriculture, forestry, construction)</p><p>●        sensitive institutions in areas with elevated temperatures (urban heat islands)</p></td></tr><tr><td>SENSITIVITY</td><td valign="top"><p>●        built-up area of settlements (km²)</p><p>●        share of population in sensitive age groups (%) (&#x3C;18, >65)</p><p>●        share of vulnerable population (%) (disabled, pregnant women)</p></td></tr><tr><td>ADAPTATION CAPACITY</td><td valign="top"><p>●        share of urban green and blue infrastructure in the urban area of the city (%)</p><p>●        availability of healthcare services</p><p>●        coverage of the area by emergency services</p><p>●        level of education of the population</p><p>●        system for warning residents about the occurrence of heatwaves</p><p>●        share of non-compliant results (according to health and environmental criteria) in urban environment monitoring (air, water, soil, food)</p></td></tr></tbody></table>
+
+**TOURISM**
+
+<table data-header-hidden><thead><tr><th></th><th valign="top"></th></tr></thead><tbody><tr><td>HAZARD: HEATHWAVE</td><td valign="top"><p>●        average daily air temperature</p><p>●        number of hot days (Tmax ≥ 30 °C)</p><p>●        number of tropical nights (Tmin > 20 °C)</p></td></tr><tr><td>EXPOSURE</td><td valign="top"><p>●        number of employees in the accommodation and food preparation and service sectors</p><p>●        increase in the number of residents during peak tourist months</p></td></tr><tr><td>SENSITIVITY</td><td valign="top"><p>●        tourism development index</p><p>●        tourism intensity indicator</p></td></tr><tr><td>ADAPTATION CAPACITY</td><td valign="top"><p>●        development of diversified tourism offers</p><p>●        investment in marketing</p><p>●        planning and development documents for the tourism sector that consider climate change</p><p>●        greenery and water availability</p></td></tr></tbody></table>
+
+**BIODIVERSITY**
+
+<table data-header-hidden><thead><tr><th></th><th valign="top"></th></tr></thead><tbody><tr><td>HAZARD: TEMPERATURE AND PERCIPITATION CHANGE</td><td valign="top"><p>●        average daily air temperature</p><p>●        number of hot days (Tmax ≥ 30 °C)</p><p>●        number of tropical nights (Tmin > 20°C)</p><p>●        number of consecutive rainy days (precipitation > 1 mm)</p><p>●        number of days with heavy precipitation (> 20 mm)</p><p>●        highest 1-day precipitation amount (Rx1d)</p></td></tr><tr><td>EXPOSURE</td><td valign="top">●        share of rare and endangered habitats</td></tr><tr><td>SENSITIVITY</td><td valign="top"><p>●        sensitive species</p><p>●        share of sensitive habitats</p></td></tr><tr><td>ADAPTATION CAPACITY</td><td valign="top"><p>●        share of protected areas</p><p>●        ecological network</p><p></p><p>●        development of urban biodiversity</p></td></tr></tbody></table>
+
+BUILDINGS
+
+<table data-header-hidden><thead><tr><th></th><th valign="top"></th></tr></thead><tbody><tr><td>HAZARD: FLOODS</td><td valign="top"><p>●        number of consecutive rainy days (precipitation > 1 mm)</p><p>●        number of days with heavy precipitation (> 20 mm)</p><p>●        highest 1-day precipitation amount (Rx1d)</p></td></tr><tr><td>EXPOSURE</td><td valign="top">●        level of area development (%)</td></tr><tr><td>SENSITIVITY</td><td valign="top"><p>●        share of buildings in flood-prone areas</p><p>●        share of buildings in areas exposed to erosion</p><p>●        share of buildings in landslide-prone areas</p></td></tr><tr><td>ADAPTATION CAPACITY</td><td valign="top"><p>●        existing flood protection system</p><p>●        readiness of operational forces for flood protection</p><p>●        functionality of the public drainage system</p><p>●        share of urban green and blue infrastructure in the urban area of the city (%)</p></td></tr></tbody></table>
+
+<table data-header-hidden><thead><tr><th></th><th valign="top"></th></tr></thead><tbody><tr><td>HAZARD: STORM</td><td valign="top">●        increase in the number of storm events</td></tr><tr><td>EXPOSURE</td><td valign="top">●        share of buildings in the developed part of the construction area</td></tr><tr><td>SENSITIVITY</td><td valign="top">●        number or percentage of (public/residential) buildings damaged due to extreme weather conditions/events</td></tr><tr><td>ADAPTATION CAPACITY</td><td valign="top"><p>●        level of education of the population</p><p>●        implementation of guidelines for building climate-resilient infrastructure into building regulations and spatial plans</p></td></tr></tbody></table>
+
+**TRANSPORT**
+
+<table data-header-hidden><thead><tr><th></th><th valign="top"></th></tr></thead><tbody><tr><td>HAZARD: FLOODS</td><td valign="top"><p>●        number of consecutive rainy days (precipitation > 1 mm)</p><p>●        number of days with heavy precipitation (> 20 mm)</p><p>●        highest 1-day precipitation amount (Rx1d)</p></td></tr><tr><td>EXPOSURE</td><td valign="top">●        share of transport surfaces in the city</td></tr><tr><td>SENSITIVITY</td><td valign="top"><p>●        share of transportation routes at risk of flooding</p><p>●        assessment of transportation routes at risk</p><p>●        transportation routes in areas exposed to erosion</p><p>●        transportation routes in landslide-prone areas</p></td></tr><tr><td>ADAPTATION CAPACITY</td><td valign="top"><p>●        existing flood protection system</p><p>●        functionality of the public drainage system</p><p>●        readiness of operational forces for flood protection</p><p>●        share of urban green and blue infrastructure in the urban area of the city (%)</p></td></tr></tbody></table>
+
+ENERGETICS
+
+<table data-header-hidden><thead><tr><th></th><th valign="top"></th></tr></thead><tbody><tr><td>HAZARD: HEATHWAVE</td><td valign="top"><p>●        average daily air temperature</p><p>●        number of hot days (Tmax ≥ 30 °C)</p><p>●        number of tropical nights (Tmin > 20 °C)</p></td></tr><tr><td>EXPOSURE</td><td valign="top"><p>●        total number of network users</p><p>●        total length of overhead power lines (km)</p></td></tr><tr><td>SENSITIVITY</td><td valign="top">●        number of power outages per network user</td></tr><tr><td>ADAPTATION CAPACITY</td><td valign="top"><p>●        implemented systems and procedures in case of power outages</p><p>●        connectivity of the electricity network in the City of Zagreb</p><p>●        number of connected solar power plants</p><p>●        energy efficiency of buildings</p></td></tr></tbody></table>
+
+<figure><img src="../.gitbook/assets/CRO-Krapina-Zagorje_draft2_tabella_rischio.png" alt=""><figcaption></figcaption></figure>
+
+Table 11 - Example of composite risk calculation following the IVAVIA methodology. The table reports normalized values for hazard (precipitation-based indicators), sensitivity (flood occurrence and infrastructure fragility), adaptive capacity (defense systems, drainage functionality, and preparedness), and exposure (population and infrastructure in flood-prone areas). These elements are combined to derive the composite vulnerability indicator and the final overall risk rating.
 
 ***
 

@@ -181,37 +181,136 @@ _Table 3 – used tools and role in the Multi-Hazard CRA Workflow_
 
 <figure><img src="../.gitbook/assets/CRO-Krapina-Zagorje_draft2_media_image24.png" alt=""><figcaption><p><em>Figure 8 – Extracted time series of meteorological indicators in current and climate change projection (example of extracted time series in the lower table)</em></p></figcaption></figure>
 
+{% hint style="info" %}
+**⮚   Note – high-frequency/resolution geographical datasets. Scripting processing**
 
+When national or European data are available at higher spatial/temporal resolution (e.g., RegCM4 outputs, hourly ERA5-Land data), indicators must be derived from sub-daily rasters rather than pre-aggregated annual layers. This usually requires simple scripting (e.g., with [GDAL ](https://gdal.org/en/stable/)or [CDO](https://code.mpimet.mpg.de/projects/cdo/wiki/tutorial)) rather than standard GIS tools. Script construction is beyond the scope of this tutorial but remains a valid option for advanced users.
+{% endhint %}
+
+{% hint style="info" %}
+**⮚   Note – local data.**
+
+While this tutorial uses widely available European datasets, the same procedure applies to local station data (e.g., from DHMZ in Croatia), either for single stations or as averages of multiple stations.
+
+
+{% endhint %}
 {% endstep %}
 
 {% step %}
 ### Step 2 — Indicators and normalization
 
-Hazard (time series):
+Following the IVAVIA methodology (Appendix D), meteorological hazard indicators were normalised with the min–max method, using the minimum and maximum across the full series (baseline + RCP8.5 projections). Annual values were aggregated into 30-year climatological windows (1991–2020, 2021–2050, 2041–2070, 2071–2100), and the mean
 
-* Normalise meteorological hazard indicators with min–max method using minima and maxima across the full series (baseline + projections).
-* Aggregate annual values into 30-year climatological windows (e.g., 1991–2020, 2021–2050, 2041–2070, 2071–2100) and normalise the mean within each window:
+<figure><img src="../.gitbook/assets/CRO-Krapina-Zagorje_draft2_media_image2.png" alt=""><figcaption></figcaption></figure>
 
-X\* = (X - Xmin) / (Xmax - Xmin)
+within each window was normalised as:
 
-Note: Dataset-derived minima/maxima spread values across \[0,1] but may misrepresent extremes; apply literature thresholds with stakeholder agreement if needed.
+where X<sup>∗</sup> is the 30-year mean, and Xmin, Xmax​ are the minimum and maximum values of the full historical + projected series.
 
-Example normalized 30-year means (illustrative):
+{% hint style="info" %}
+**⮚     Note – normalization.**
 
-| Window    | Wind norm | Hot norm | Precip norm |
-| --------- | --------- | -------- | ----------- |
-| 1991–2020 | 0.4216    | 0.1322   | 0.2942      |
-| 2021–2050 | 0.4118    | 0.2011   | 0.4232      |
-| 2041–2070 | 0.4039    | 0.2877   | 0.4168      |
-| 2071–2100 | 0.4076    | 0.5222   | 0.4738      |
+_Dataset-derived minima and maxima spread values across \[0,1], but may misrepresent extremes if observed values cover only part of the plausible range. In such cases, thresholds from literature or records should be applied, with stakeholder agreement and documentation._
+{% endhint %}
 
-Hazard (flood map):
+Example of the 3-time series like indicators once normalized for one of the areas of interest are reported in the following table.
 
-* Derive mean flood depth within polygon (zonal statistics). Normalise using a reference minimum and maximum (e.g., Hmin = 0 m; Hmax = maximum observed depth or literature threshold):
+<figure><img src="../.gitbook/assets/CRO-table.png" alt=""><figcaption></figcaption></figure>
 
-Hflood = (Hfloodraw - Hmin) / (Hmax - Hmin)
+Table 4 - thirty-year mean values and normalised scores of hazard indicators (wind, heat, precipitation) for the baseline period (1991–2020) and three future climate windows under RCP8.5.
 
-Example: mean = 0.97 m, min = 0.11 m, max = 2.55 m → Hflood = 0.37
+For this tutorial, time-series indicators are assumed spatially uniform over the study area—i.e., one pixel represents the whole exposed population/assets. This is a simplification: local topography or drainage strongly modulates impacts. More advanced assessments would convert time-series indicators into pluvial flood or urban heat island maps (see dedicated tutorials ).
+
+In the next section, we address hazard indicators that are **spatially distributed**, focusing in this tutorial on flood hazard maps.
+
+&#x20;
+
+**Hazard – flood (map)**
+
+Flood hazard is derived from raster water-depth maps (e.g., 100-year return period). The raster is clipped to the study polygon, and zonal statistics provide mean, minimum, and maximum depths.
+
+&#x20;The mean depth is then normalised as:
+
+<figure><img src="../.gitbook/assets/CRO-Krapina-Zagorje_draft2_media_image11.png" alt=""><figcaption></figcaption></figure>
+
+where:
+
+●        Hfloodraw ​ = mean depth (m) in the polygon,
+
+●        Hmin ​ = reference minimum (0 m),
+
+●        Hmax ​ = reference maximum (either the maximum observed depth across a larger domain or a fixed threshold from literature/experts, e.g. 2 m).
+
+_Example over one of the areas of interest_ mean = 0.97 m, min = 0.11 m, max = 2.55 m → Hflood​=0.37.
+
+**Sensitivity**
+
+According to the IVAVIA methodology, sensitivity describes the intrinsic characteristics of exposed elements that determine how strongly they are affected by hazards. It is independent of hazard extent and instead reflects the fragility of people, infrastructure, or systems. In this workflow, **illustrative sensitivity indicators are proposed for each hazard**, based on available demographic and structural data.
+
+&#x20;●        **Heat hazard (Hot days)**: sensitivity expressed by the demographic structure, with the share of elderly (>65) and children (<15) serving as a proxy for groups more vulnerable to heat impacts.
+
+●      **Wind hazard (Extreme wind speed days)**: sensitivity linked to building fragility; in absence of detailed data, the density of residential buildings is used as a proxy.
+
+●        **Precipitation hazard (Extreme precipitation days)**: sensitivity reflecting the capacity of the urban environment to manage intense rainfall. A practical proxy adopted here is the share of impermeable surfaces, which increases susceptibility to pluvial flooding.
+
+●        **Flood hazard (River flood depth maps**): sensitivity expressed by the structural fragility of buildings; in the absence of detailed attributes, a proxy is the share of ground-floor residential area within the total building footprint.
+
+&#x20;All sensitivity indicators can be derived with standard GIS overlays and zonal statistics. To keep the tutorial concise, no full implementation is provided; instead, normalized values (0–1) are assumed for illustrative purposes.
+
+{% hint style="info" %}
+**⮚     Note – Methodological caveat:**
+
+The indicators shown here are only operational examples. IVAVIA (see Appendix on sensitivity indicators) recommends defining context-specific indicators based on local data and hazard characteristics. Possible alternatives include socio-economic status, critical infrastructure, or health service coverage. **Because sensitivity is highly context-dependent, indicator selection should be validated with stakeholders and supported by reliable evidence.**
+
+<img src="../.gitbook/assets/CRO-tab2.png" alt="" data-size="original">
+
+Table 5 - Proposed illustrative sensitivity indicators for the four hazards considered. These indicators are derived from demographic and structural datasets and serve as operational examples for this workflow. According to IVAVIA, final indicator selection should be adapted to local data availability and validated with stakeholder&#x73;_._
+
+To visually illustrate how sensitivity interacts with exposure and adaptive capacity, the IVAVIA methodology provides impact chains that link climate hazards to sectoral impacts. For example, the impact chain for heatwaves and public health (IVAVIA Guideline, Appendix C) shows how demographic characteristics such as the proportion of elderly or children, combined with coping capacity factors like availability of health services, shape the final vulnerability of a community. This schematic representation supports the interpretation of the simplified sensitivity indicators adopted in this tutorial.
+{% endhint %}
+
+<figure><img src="../.gitbook/assets/CRO-Krapina-Zagorje_draft2_media_image16.png" alt=""><figcaption><p><em>Figure 9 - Example of an IVAVIA impact chain for heatwaves and public health. The diagram illustrates how hazard indicators (e.g., frequency of heatwaves) interact with sensitivity factors (e.g., share of elderly population, population density, building typologies) and adaptive capacity elements (e.g., health services, early warning systems) to determine the overall level of vulnerability and impacts on public health. Source: IVAVIA Guideline v3, Appendix C</em></p></figcaption></figure>
+
+**Exposure**
+
+According to the IVAVIA methodology, exposure refers to the presence and distribution of people, buildings, or infrastructures located within areas potentially affected by climate hazards. Unlike sensitivity, which captures intrinsic fragility, exposure quantifies how many assets are actually situated in hazard zones.
+
+{% hint style="info" %}
+**⮚      Note – Methodological caveat:**
+
+_In this tutorial, exposure indicators are derived from a limited set of available datasets—population density grids (100 m resolution) and building footprint polygons. The approach varies by hazard type and is presented here for didactic purposes only. The IVAVIA guidelines provide broader examples, validated with stakeholders, for tailoring exposure assessment to local contexts._
+
+&#x20;
+
+●        **Heat, Wind, and Precipitation hazards**: Since these indicators are represented as uniform time-series values across the study area, exposure is assumed to be total (value = 1), meaning all population and buildings are equally affected.
+
+&#x20;
+
+●       **Flood hazard:** Exposure is spatially differentiated and calculated by intersecting the flood depth map with building footprints and population grids. Metrics such as the share of residential floor area or population within the 100-year floodplain can be used. In this example, the normalized exposure index is estimated at ≈ 0.25.
+{% endhint %}
+
+As with sensitivity, exposure can be derived through standard GIS overlay and zonal statistics, without requiring advanced examples here. Population exposure is obtained by summing grid values within hazard zones, while building exposure is calculated from the footprint area intersecting the hazard extent.
+
+**Adaptation Capacity**
+
+According to the IVAVIA methodology, adaptation capacity refers to the ability of institutions, infrastructure, and communities to anticipate, absorb, and recover from climate hazard impacts. Unlike sensitivity or exposure, which can be measured with demographic or structural datasets, adaptation capacity is context-specific and often linked to governance quality, preparedness, and technical measures.
+
+{% hint style="info" %}
+**⮚     Note – Methodological caveat:**\
+In this workflow, adaptation capacity indicators are introduced only as hypothetical examples, since robust local data (e.g., levee length, drainage network capacity, emergency planning) are not readily available for either Krapina–Zagorje or Zagreb. As underlined in IVAVIA (Section 4.2), qualitative or categorical indicators—such as the presence of early-warning systems, enforcement of building codes, or stakeholder perceptions—can also be used. In practice, **these indicators should be locally validated, but here simplified values are applied to complete the Climate Risk Assessment framework.**
+
+&#x20;
+
+●        **Heat hazard (hot days):** Capacity may include health services, social support, cooling shelters, or urban greening. Example value: 0.6 (moderate preparedness).
+
+●        **Wind hazard (extreme wind speed days**): Linked to building standards, warning systems, and civil protection readiness. Example value: 0.5 (partial preparedness).
+
+●       **Precipitation hazard (extreme precipitation days)**: Reflects drainage and green infrastructure performance. Example value: 0.4 (limited capacity).
+
+●       **Flood hazard (river flood depth maps)**: Based on structural defences, contingency planning, and operational readiness. Example value: 0.3 (low preparedness).
+{% endhint %}
+
+These values are purely illustrative. In operational settings, IVAVIA recommends a mix of quantitative metrics (e.g., kilometres of levees, share of urban green areas) and qualitative indicators (e.g., presence of emergency plans), depending on hazard type and data availability.
 {% endstep %}
 
 {% step %}

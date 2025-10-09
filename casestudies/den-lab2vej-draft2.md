@@ -120,7 +120,7 @@ gdalwarp --config GDAL\_NUM\_THREADS ALL\_CPUS -r bilinear -tr 1,2 1,2 -t\_srs E
 For further reference, see the GDAL [_gdalwarp documentation_](https://gdal.org/en/stable/programs/gdalwarp.html).
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/DEN-Lab2Vej_draft2_media_image3.png" alt="" width="375"><figcaption></figcaption></figure>
+<div align="left"><figure><img src="../.gitbook/assets/DEN-Lab2Vej_draft2_media_image3.png" alt="" width="375"><figcaption></figcaption></figure></div>
 
 <figure><img src="../.gitbook/assets/DEN-Lab2Vej_draft2_media_image4.png" alt="" width="375"><figcaption><p>Figure 2 – example of Lidar DTM along the coast from GeoDanmark geoportal (down sampled @ 1,2 m ) compared to satellite map, obstacles such as buildings and trees are filtered from the terrain surface. Underwater topography is not represented.</p></figcaption></figure>
 
@@ -150,26 +150,36 @@ Building footprints, land-use layers, and coastal protection structures are inte
 
 <figure><img src="../.gitbook/assets/DEN-Lab2Vej_draft2_media_image5.png" alt=""><figcaption><p>Figure 3 – example of large, flooded area with 10 cm marine water by a 100-year storm surge in 2100 in Odense Fjord catchment area.</p></figcaption></figure>
 
+<figure><img src="../.gitbook/assets/DEN-Lab2Vej_draft2_media_image7.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../.gitbook/assets/DEN-Lab2Vej_draft2_media_image6.png" alt=""><figcaption><p>Figure 4 – example of detailed costal flood inundation model for actual (T100,  1,72 m a.s.l. ) and  projected (T100 2100,  2,52 m a.s.l. ) surge conditions ,(courtesy of <a href="https://saferplaces.co/rimini-and-climate-change-the-added-value-of-the-sea-park-parco-del-mare/">SaferPlaces</a> platform).</p></figcaption></figure>
 
-Figure 4 – example of detailed coastal flood inundation model for actual (T100, 1.72 m a.s.l.) and projected (T100 2100, 2.52 m a.s.l.) surge conditions (courtesy of [SaferPlaces](https://saferplaces.co/rimini-and-climate-change-the-added-value-of-the-sea-park-parco-del-mare/)).
+<figure><img src="../.gitbook/assets/DEN-Lab2Vej_draft2_media_image8.png" alt=""><figcaption><p>Figure 5 - Workflow to obtain flood risk map using one of the flood models listed in Table 2</p></figcaption></figure>
 {% endstep %}
 
 {% step %}
-### Analysis and interpretation
+### Step 3 - Analysis and interpretation
 
 Flood extent and depth maps generated in the model run are imported into GIS for post-processing and interpretation. The results are overlaid with land-use layers, municipal planning zones, and building footprints to identify which categories of land and infrastructure are most affected under different storm surge scenarios.
 
 The classification of flood depth ranges (e.g. <25 cm, 25–50 cm, 50–100 cm, >100 cm) supports the identification of vulnerability hotspots. By intersecting hazard outputs with agriculture, commercial areas, residential zones, and planned restoration sites, it is possible to estimate which surfaces and assets are exposed and also generate simple spatial statistics as the key indicators mentioned in Table 1.
 
-Although a full damage model is not implemented in this tutorial, the analysis provides a **qualitative assessment of potential flood damage**, based on the overlap between flood maps and land-use categories. This forms the basis for future extensions where depth–damage curves could translate hazard into economic loss estimates.
+<figure><img src="../.gitbook/assets/DEN-Lab2Vej_draft2_media_image9.png" alt=""><figcaption><p>Figure 6 – example of overlay of basic land use-cover map with flood areas in climate change scenarios in GIs environment</p></figcaption></figure>
+
+Although a full damage model is not implemented in this tutorial, the analysis provides a **qualitative assessment of potential flood damage**, based on the overlap between flood maps and land-use categories. This forms the basis for future extensions where depth–damage curves could translate hazard into economic loss estimates
 
 {% hint style="info" %}
-Note: All modelling suites can be complemented with damage estimation modules. These typically require intersecting flood hazard outputs (e.g. water depth rasters) with asset value layers and applying water depth–damage curves. This can be performed, when not embedded in the flood assessment tool, separately within the GIS environment or via external models.
+**Note: damage assessment.**
+
+_Note all modelling suites can be complemented with damage estimation modules. These typically require intersecting flood hazard outputs (e.g. water depth rasters) with asset value layers and applying water depth–damage curves. This can be performed, when not embedded in the flood assessment tool, separately within the GIS environment or via external models._
+
+_For a more advanced implementation of this methodology, including regionalized vulnerability functions, see for example:_
+
+_Cost-benefit analysis of coastal flood defence measures in the North Adriatic Sea_\
+&#xNAN;_&#x41;madio, M., Essenfelder, A.H., Bagli, S., …Mysiak, J., Roberts, S._\
+&#xNAN;_&#x4E;atural Hazards and Earth System Sciences, 2022, 22(1), pp. 265–286,_ [_https://doi.org/10.5194/nhess-22-265-2022_](https://doi.org/10.5194/nhess-22-265-2022)
 {% endhint %}
 
-For an advanced implementation of this methodology, including regionalized vulnerability functions, see for example:
 
-* Amadio, M., Essenfelder, A.H., Bagli, S., … Mysiak, J., Roberts, S. (2022). Cost-benefit analysis of coastal flood defence measures in the North Adriatic Sea. Natural Hazards and Earth System Sciences, 22(1), pp. 265–286. https://doi.org/10.5194/nhess-22-265-2022
 {% endstep %}
 {% endstepper %}

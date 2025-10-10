@@ -4,9 +4,11 @@
 
 #### Regional context
 
-Helsingborg Municipality (https://en.wikipedia.org/wiki/Helsingborg\_Municipality), located in the Skåne region of southern Sweden, includes urban, peri-urban, and agricultural landscapes shaped by a network of small streams, culverts, and historical wetlands. The municipality and its upstream catchments face increasing risks from pluvial flooding, high flows, and extreme rainfall events, driven by changing climate patterns. Urban expansion and infrastructure have fragmented ecological corridors, reducing connectivity between key ecological value cores such as wetlands, swamp forests, and deciduous forests. At the same time, protected areas, including Natura 2000 sites, and existing ecological assets provide opportunities for targeted Blue-Green Infrastructure (BGI) interventions. These can mitigate flood risks, restore hydrological continuity, and strengthen ecological resilience at the catchment scale.
+[Helsingborg Municipality](https://en.wikipedia.org/wiki/Helsingborg_Municipality), located in the Skåne region of southern Sweden, includes urban, peri-urban, and agricultural landscapes shaped by a network of small streams, culverts, and historical wetlands. The municipality and its upstream catchments face increasing risks from pluvial flooding, high flows, and extreme rainfall events, driven by changing climate patterns. Urban expansion and infrastructure have fragmented ecological corridors, reducing connectivity between key ecological value cores such as wetlands, swamp forests, and deciduous forests. At the same time, protected areas, including Natura 2000 sites, and existing ecological assets provide opportunities for targeted Blue-Green Infrastructure ([BGI](https://www.sciencedirect.com/science/article/abs/pii/S0040162520313548)) interventions. These can mitigate flood risks, restore hydrological continuity, and strengthen ecological resilience at the catchment scale.
 
-Figure 1 - Location of the Helsingborg municipality in Skåne.
+<figure><img src="../.gitbook/assets/SWE-Lab2Hel_BGi_draft2_media_image1.png" alt=""><figcaption><p>Figure 1 - Location of the Helsingborg municipalitiy s in Skåne</p></figcaption></figure>
+
+
 
 #### Scope of the tutorial
 
@@ -18,17 +20,19 @@ Disclaimer
 This tutorial is intended as a general workflow example and does not replace software-specific documentation (e.g., GIS, hydrological, hydraulic tools user/technical manuals). Users should already be familiar with the relevant geospatial data formats, data pre-processing techniques, and modelling concepts applicable to their hazard of interest (e.g., flood mapping), as well as with the specific input/output requirements and run functionalities of the modelling software before attempting to replicate this workflow.
 {% endhint %}
 
-Figure 2 - Illustration of two-stage ditches in Helsingborg and vegetation in a ditch (top), and Blue-green corridors in the agricultural landscape in Helsingborg municipality (bottom)
+<figure><img src="../.gitbook/assets/SWE-Lab2Hel_BGi_draft2_media_image2_merge.png" alt=""><figcaption><p>Figure 2 - Illustration of two-stage ditches in Helsingborg and vegetation in a ditch (top) , and Blue-green corridors in the agricultural landscape in Helsingborg municipality (bottom</p></figcaption></figure>
+
+
 
 #### CRA objectives
 
 The Helsingborg CRA aims to:
 
-* Identify priority sites for BGI that address both pluvial and fluvial flood risks while improving ecological connectivity.
-* Link ecological value cores—including wetlands, swamp forests, and deciduous forests—through restored corridors along streams and culverts.
+* **Identify priority sites** for BGI that address both pluvial and fluvial flood risks while improving ecological connectivity.
+* **Link ecological value core**s—including wetlands, swamp forests, and deciduous forests—through restored corridors along streams and culverts.
 * Integrate hydrological and ecological criteria to select multifunctional intervention areas, prioritising locations with overlapping flood vulnerability and restoration potential.
-* Support planning and policy by providing spatial evidence for land-use strategies, climate adaptation plans, and ecological restoration projects.
-* Enable replication of the workflow in other regions by relying on GIS-based analysis and datasets that have open or EU-wide equivalents.
+* **Support planning and policy** by providing spatial evidence for land-use strategies, climate adaptation plans, and ecological restoration projects.
+* **Enable replication** of the workflow in other regions by relying on GIS-based analysis and datasets that have open or EU-wide equivalents.
 
 #### Intended users
 
@@ -71,7 +75,7 @@ The table below summarizes key datasets, their role in the workflow, and potenti
 | Ecological value cores – deciduous forest, swamp forest, wetland | County Administrative Board | Locate existing high-value ecosystems for connectivity planning                                         | <p>Copernicus High Resolution Layer: <a href="https://land.copernicus.eu/en/products/high-resolution-layer-forests-and-tree-cover">High Resolution Layer Tree Cover and Forests</a><br>Copernicus <a href="https://land.copernicus.eu/en/products/global-dynamic-land-cover/land-cover-2020-raster-10-m-global-annual">Land Cover 2020 (raster 10 m), global, annual - version 1</a>, includes wetlands delineation</p> |
 | Natura 2000 sites                                                | County Administrative Board | Identify legally protected ecological zones                                                             | EEA Natura 2000 Database ([vector, Europe-wide](https://www.eea.europa.eu/data-and-maps/data/natura-14/natura-2000-spatial-data))                                                                                                                                                                                                                                                                                       |
 
-Table 3 – used data, and alternative datasets to replicate the assessment outside the study area when available.
+Table 2 – used data, and alternative datasets to replicate the assessment outside the study area when available.
 
 {% hint style="info" %}
 Climate change effects in hydrological extremes
@@ -81,9 +85,13 @@ Although the current workflow does not incorporate official climate projections,
 A practical example of this approach has been implemented [here](https://www.euspa.europa.eu/newsroom-events/success-stories/copernicus-hydropower-flood-assessments) for a hydropower site in Switzerland, where Copernicus climate projections, coupled with limited gauging station statistics for basic downscaling, were used to estimate future 100-year flood discharges and run simplified hydraulic simulations to assess potential downstream impacts.
 {% endhint %}
 
-Figure 3 – example of LiDAR DTM, one of the main drivers of flood risk assessment for the Helsingborg area compared to satellite map; obstacles such as buildings and trees are filtered from the DTM surface.
+<figure><img src="../.gitbook/assets/SWE-Lab2Hel_BGi_draft2_media_image9.png" alt=""><figcaption></figcaption></figure>
 
-The workflow combines proprietary and open-source tools for GIS processing, flood hazard analysis, and hydrological-ecological connectivity mapping. Proprietary platforms are used for advanced analysis and visualisation, while open-source alternatives have been identified so that the method can be replicated in other contexts:
+<figure><img src="../.gitbook/assets/SWE-Lab2Hel_BGi_draft2_media_image10.png" alt=""><figcaption><p>Figure 3 – example of Lidar DTM, one of the main driver of flood risk assessment, for Helsingborg area compared to satellite map; obstacles such as buildings and trees are filtered from the DTM surface.</p></figcaption></figure>
+
+
+
+The workflow combines proprietary and open-source **tools** for GIS processing, flood hazard analysis, and hydrological-ecological connectivity mapping. Proprietary platforms are used for advanced analysis and visualisation, while open-source alternatives have been identified so that the method can be replicated in other contexts:
 
 | Tool                                                                         | Type        | Role in Workflow                                                                                                                                                                                                                                              |
 | ---------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -100,83 +108,88 @@ Table 2 – used tools and role in the workflow; where available, a free similar
 
 {% stepper %}
 {% step %}
-### Data acquisition and preparation
+### Step 1 - Data acquisition and preparation
 
-Gather and prepare all spatial datasets needed for the analysis, ensuring they share the same projection (identified by a unique EPSG code, like [3006](https://epsg.io/3006) for the example) and are clipped to the extent of the area of interest (e.g., Helsingborg Municipality including its upstream contributing catchments).
+The first stage of the workflow consists in gathering and **preparing all spatial datasets** needed for the analysis, ensuring that they share the **same projectio**n (identified by a unique  EPSG code , like [3006 ](https://epsg.io/3006)fort the example)  **and are clipped** to the extent of the area of interest( e.g. Helsingborg Municipality( including  and its upstream contributing catchments.
 
-Key inputs and checks:
+High-resolution **topography** from a LiDAR-based DEM (Figure 3) provides the basis for identifying surface depressions, micro-topography features, and potential flow accumulation zones; if unavailable, the Copernicus DEM can serve as an alternative.
 
-* High-resolution topography from a LiDAR-based DEM to identify surface depressions, micro-topography features, and potential flow accumulation zones (Copernicus DEM as alternative if LiDAR unavailable).
-* Rainfall maps for different return periods and extreme flow statistics (e.g., MSB, Vattenatlas).
-* Official flood hazard maps for selected return periods if available; otherwise produce using hydraulic/hydrological modelling tools.
-* Ecological datasets: value cores for wetlands, swamp forests, deciduous forests, Natura 2000 sites, water connectivity links, historical wetlands, and designated floodplain restoration areas.
-* Contributing catchment boundaries for hydrological unit referencing.
+Hydrological inputs include rainfall maps for different return periods and extreme flow statistics from sources (such as MSB and Vattenatlas), which define the magnitude and frequency of flood scenarios. Where available, official flood hazard maps—showing extent and depth for selected return periods—should be loaded; otherwise, they can be produced using compatible hydraulic or hydrological modelling tools.
 
-Ensure resolution consistency, format compatibility, and attribute completeness. When national datasets are not available, use the open/EU alternatives listed earlier.
+**Ecological datasets**, including value cores for wetlands, swamp forests, and deciduous forests, as well as Natura 2000 sites and **water connectivity links** from the County Administrative Board, are then added to capture biodiversity and connectivity priorities. Layers showing historical wetlands and designated floodplain restoration areas are included to identify locations with natural retention potential. (Figure 4).
+
+The **contributing catchment boundaries** provide a reference framework for structuring the analysis at hydrological unit level. Before moving forward, all layers should be checked for resolution consistency, format compatibility, and completeness of attributes. When national datasets are not available, equivalent open or EU-wide sources listed in the data table can be used to replicate the process
 
 {% hint style="warning" %}
 Domain extent
 
-Adopting the full contributing catchment as model domain may result in an excessively large computational extent. Consider first performing a hydrological assessment of peak discharges / flood waves to restrict the hydraulic risk model to areas actually affected by flooding and targeted for Nature-Based Solutions. This reduces DEM inputs and computational load without compromising relevance.
+Adopting the full contributing catchment as model domain may result in an **excessively large computational extent.** Consider first performing a hydrological assessment of peak discharges / flood waves to restrict the hydraulic risk model to areas actually affected by flooding and targeted for Nature-Based Solutions. This reduces DEM inputs and computational load without compromising relevance.
 {% endhint %}
+
+<figure><img src="../.gitbook/assets/SWE-Lab2Hel_BGi_draft2_media_image11.jpeg" alt=""><figcaption><p>Figure 4 example map showing value cores and connectivity map obtained via GIS overlaying of key layers</p></figcaption></figure>
 {% endstep %}
 
 {% step %}
-### Model setup and run
+### Step 2 - Model setup and run
 
-Simulate flood processes to locate where hydraulic risk overlaps ecological opportunity. Start with terrain morphology analyses to pinpoint depressions, low-lying storage zones, and overland main flow pathways using flow direction and accumulation computations.
+Once spatial data are in place, the key task is to **simulate flood processes** to locate where hydraulic risk overlaps ecological opportunity. The procedure begins with **terrain morphology analysis to pinpoint depressions, low-lying storage zones, and overland main flow pathways** easily activated during high-flow conditions. This can be achieved using hydro morphological tools that compute flow direction, accumulation, and potential storage segmentations.
 
-Approaches:
+These analyses are directly applicable in simplified, zero-dimensional (0D) modelling approaches, where storage zones and flood retention areas are identified based solely on terrain input—no need for complex hydraulic simulations. Such 0D methods are often employed to represent, beside simplified flood models, also rapid, intense rainfall events (e.g., urban flash floods), and are useful when computational resources are limited or rapid assessments are needed (\[1]).
 
-* 0D (zero-dimensional) methods: identify storage zones and retention areas solely from terrain input; suitable for rapid assessments or limited computational resources (e.g., urban flash floods).
-* 2D inundation models: where higher detail is possible, use two-dimensional hydraulic modelling of river channels and adjacent flood-prone areas.
+Example of depression delineating using terrain morphology analysis in reported in (Figure 5).
 
-Produce flood hazard layers representing extent and water depth for target return periods (e.g., 10-, 50-, 100-year events). Use morphological outputs (flow paths, depressions, temporary storage zones) overlaid in GIS to obtain initial spatial indications of suitable BGI locations.
+\[1] [https://www.mdpi.com/2073-4441/12/6](https://www.mdpi.com/2073-4441/12/6)
 
-Example illustrations: depression detection, flow paths, and flood zones obtained via flood modelling tools.
+<figure><img src="../.gitbook/assets/SWE-Lab2Hel_BGi_draft2_media_image12.png" alt=""><figcaption><p>Figure 5 – example of depression detection via raster-based analysis of DTM (courtesy of <a href="https://saferplaces.co/">SaferPlaces</a>)</p></figcaption></figure>
+
+The initial morphological analysis already provides valuable insight into potential intervention areas. By extracting flow directions and delineating depressions or temporary storage zones from the DEM, it is possible to generate maps of flow paths and inundation-prone areas. When these outputs are overlaid in the GIS environment, they offer a first spatial indication of where Blue-Green Infrastructure could be located to maximise retention capacity and align with natural hydrological processes (Figure 6).
+
+<figure><img src="../.gitbook/assets/SWE-Lab2Hel_BGi_draft2_media_image13.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/SWE-Lab2Hel_BGi_draft2_media_image14.jpeg" alt=""><figcaption><p>Figure 6 example of Flow paths and flood zones detection via Flood Modeling tools, overlayed in GIS environment to base maps</p></figcaption></figure>
+
+Next, flood hazard layers representing extent and water depth for target return periods (e.g., 10-, 50-, 100-year events).
+
+If hydraulic simulation is carried out, the choice of modelling approach should reflect both the availability of topographic information and the computational resources at hand. In some cases, a very simple scheme—such as the zero-dimensional (0D) approach introduced earlier, based on storage areas and flood routing—may be sufficient. Where higher detail is possible, the analysis can instead rely on more refined methods, such as a two-dimensional inundation model of the river channel and adjacent flood-prone areas.
+
+<figure><img src="../.gitbook/assets/SWE-Lab2Hel_BGi_draft2_media_image15.png" alt=""><figcaption><p>Figure 7 - Example of 2D flood model of a flood volume upstream of an urban area (courtesy of <a href="https://saferplaces.co/">SaferPlaces</a>)</p></figcaption></figure>
+
+
+
+\
+
 {% endstep %}
 
 {% step %}
-### Ecological connectivity mapping and priority area selection
+### Step 3 - Ecological connectivity mapping and priority area selection
 
-Integrate ecological structures by combining ecological value cores (wetlands, swamp forests, deciduous forests) with water connectivity links to identify existing nodes and corridors. Where gaps exist, sketch potential connections along streams, ditches, or culverts.
+At this stage, the analysis shifts from purely hydrological aspects to the **integration of ecological structures.** The first step is to combine the official **ecological value cores—such as wetlands, swamp forests, and deciduous forests—with the water connectivity links** provided by the County Administrative Board. This allows the identification of existing ecological nodes and corridors across the landscape. Where gaps exist, new potential connections can be drawn manually along streams, ditches, or culverts, thereby sketching a conceptual network that could restore or reinforce continuity.
 
-Overlay ecological networks with flood-related outputs from the modelling step. Prioritise polygons where:
+The next step is to **overlay this ecological layer with the flood-related outputs prepared in Step 2.** Particular attention is given to areas where depressions, historical wetlands, or high-flow zones overlap with ecological corridors, since these locations represent multifunctional opportunities: they can serve as flood retention areas while simultaneously strengthening habitat connectivity.
 
-* Depressions, historical wetlands, or high-flow zones overlap with ecological corridors.
-* Significant storage potential coincides with proximity to existing ecological value cores or known flood pathways.
+&#x20;Priority **should be given to polygons where several favourable conditions coincide**—for example, significant storage potential in a depression, proximity to existing ecological value cores, or alignment with known flood pathways. These areas could then be **digitised into a dedicated GIS layer** (e.g. “BGI intervention opportunities.”)
 
-Digitise selected polygons into a dedicated GIS layer (e.g., “BGI intervention opportunities”) and attribute each polygon with characteristics such as approximate storage volume, connectivity function, and degree of overlap with hazard zones.
+Each polygon can be characterized with **basic attributes such as** approximate storage volume, connectivity function, or degree of overlap with hazard zones.
 
-Output: spatially explicit shortlist of candidate sites where BGI measures can deliver combined benefits for flood mitigation and ecological resilience.
+&#x20;
+
+The outcome of this step is a **spatially explicit shortlist of candidate sites where Blue-Green Infrastructure measures are most likely to deliver combined benefits** for flood mitigation and ecological resilience. This dataset will serve as the foundation for testing hydraulic performance and ranking interventions in the following step.
 {% endstep %}
 
 {% step %}
-### Hydraulic re-simulation and performance assessment of proposed BGI sites
+### Step 4  - Hydraulic re-simulation and performance assessment of proposed BGI sites
 
-Test candidate intervention areas by incorporating proposed BGI polygons (wetlands, two-stage ditches, restored floodplains) into the hydraulic simulation domain. Assign simplified hydraulic properties to each intervention area (indicative storage volume, infiltration capacity, connectivity to flow paths).
+Once candidate intervention areas have been identified, the next step is to test their potential effectiveness in reducing flood risk. This is done by **incorporating** the proposed Blue-Green Infrastructure (BGI) polygons—such **as wetlands, two-stage ditches, or restored floodplains—into the hydraulic simulation domain prepared in Step 2.** Each intervention area is assigned **basic hydraulic propertie**s, for example an indicative storage volume, infiltration capacity, or connectivity to adjacent flow paths. These attributes are simplified but sufficient to represent the effect of the intervention within the chosen modelling framework.
 
-Re-run hydraulic models for the same flood scenarios including the BGI elements. Compare outputs to baseline to quantify changes in flood extent and depth. Typical performance indicators:
+The hydraulic model is then re-run under the same flood scenarios previously simulated, this time including the BGI elements. The out**puts are compared against the baseline to quantify changes in flood extent and depth. Typical performance indicators include the reduction in flooded area, the decrease in maximum water depth within a buffer zone, or the total volume of water retained.** These results can be stored as attributes within the GIS layer of BGI polygons, creating a spatially explicit database of intervention benefits.
 
-* Reduction in flooded area.
-* Decrease in maximum water depth within buffer zones.
-* Total volume of water retained.
+&#x20;This procedure may be repeated for multiple return periods or climate scenarios to evaluate the robustness of BGI measures under varying conditions. The outcome is a ranked set of candidate sites, where hydrological performance can be weighed together with ecological connectivity benefits. Such basic multi-criteria assessment supports decision-makers in prioritising those interventions that deliver the highest combined resilience gains.
 
-Store results as attributes within the BGI polygons layer to create a spatial database of intervention benefits. Repeat for multiple return periods or climate scenarios where needed to evaluate robustness. Use results for multi-criteria ranking combining hydrological performance and ecological connectivity.
 
-References:
-
-* https://www.mdpi.com/2073-4441/12/6
 {% endstep %}
 {% endstepper %}
 
-Figure 4 – example map showing value cores and connectivity map obtained via GIS overlaying of key layers.
 
-Figure 5 – example of depression detection via raster-based analysis of DTM (courtesy of SaferPlaces)
-
-Figure 6 – examples of flow paths and flood zones detected via flood modelling tools and overlaid in the GIS environment.
-
-Figure 7 – Example of 2D flood model of a flood volume upstream of an urban area (courtesy of SaferPlaces)
 
 References
 

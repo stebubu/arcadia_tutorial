@@ -463,5 +463,3 @@ ENERGETICS
 Table 11 - Example of composite risk calculation following the IVAVIA methodology. The table reports normalized values for hazard (precipitation-based indicators), sensitivity (flood occurrence and infrastructure fragility), adaptive capacity (defense systems, drainage functionality, and preparedness), and exposure (population and infrastructure in flood-prone areas). These elements are combined to derive the composite vulnerability indicator and the final overall risk rating.
 
 ***
-
-End of document.

@@ -11,21 +11,30 @@ The [Podravje Region](https://en.wikipedia.org/wiki/Podravje_Statistical_Region)
 This tutorial describes a replicable Climate Risk Assessment (CRA) workflow for the two main hazards — floods (both fluvial and pluvial) and urban heatwaves — in the Podravje Innovation Lab. The approach does not require coding and relies on a combination of national datasets, proprietary and open-source tools, and publicly available European datasets to ensure transferability to other regions. The workflow supports integration of Nature-Based Solutions (NbS) and Blue-Green Infrastructure (BGI) into local and regional adaptation strategies, enabling assessment under current and projected climate scenarios.
 
 {% hint style="info" %}
+**Disclaimer**
+
 This tutorial is intended as a general workflow example and does not replace software-specific documentation (e.g., GIS, hydrological, hydraulic, or urban climate modelling tools user/technical manuals). Users should already be familiar with the relevant geospatial data formats, data pre-processing techniques, and modelling concepts applicable to their hazard of interest (e.g., floods, UHIs, droughts, etc.), as well as with the specific input/output requirements and run functionalities of the modelling software before attempting to replicate this workflow.
 {% endhint %}
 
 #### CRA objectives
 
-* Understand vulnerabilities — Identify communities, ecosystems, and infrastructure most exposed to floods and heatwaves.
-* Characterize hazards — Analyze current and future climate conditions using observed data, climate projections, and socio-economic scenarios.
-* Assess impacts — Quantify exposure and potential consequences across key sectors such as agriculture, infrastructure, water resources, health, and biodiversity.
-* Prioritize adaptation measures — Identify where NbS and BGI can deliver the highest resilience gains and co-benefits.
-* Support planning and policy — Provide evidence for land-use planning, emergency preparedness, and regional development strategies.
-* Enable monitoring — Define baseline indicators and monitoring frameworks to track hazard trends and adaptation effectiveness over time.
+The Podravje CRA aims to:
+
+**Understand vulnerabilities** — Identify communities, ecosystems, and infrastructure most exposed to floods and heatwaves.
+
+**Characterize hazards** — Analyze current and future climate conditions using observed data, climate projections, and socio-economic scenarios.
+
+**Assess impact**s — Quantify exposure and potential consequences across key sectors such as agriculture, infrastructure, water resources, health, and biodiversity.
+
+**Prioritize adaptation measures** — Identify where NbS and BGI can deliver the highest resilience gains and co-benefits.
+
+**Support planning and policy** — Provide evidence for land-use planning, emergency preparedness, and regional development strategies.
+
+**Enable monitoring** — Define baseline indicators and monitoring frameworks to track hazard trends and adaptation effectiveness over time.
 
 #### Intended users
 
-For both hazards, the Climate Risk Assessment is intended for regional and municipal authorities who need to integrate hazard and exposure data into spatial and emergency planning, civil protection agencies responsible for preparedness and response to extreme events, and environmental NGOs and research institutions engaged in monitoring, restoration, and public outreach. Policy-makers and land managers also use the results to design adaptive regulations and direct investments where resilience measures can provide the greatest benefits.
+For both hazards, the Climate Risk Assessment is intended for **regional and municipal authorities** who need to integrate hazard and exposure data into spatial and emergency planning, civil protection **agencies** responsible for preparedness and response to extreme events, and **environmental NGOs and research institutions** engaged in monitoring, restoration, and public outreach. **Policy-makers** and **land managers** also use the results to design adaptive regulations and direct investments where resilience measures can provide the greatest benefits.
 
 In the Podravje context, this means that flood hazard outputs support zoning, infrastructure planning, and the identification of priority areas for floodplain restoration, while heatwave assessments guide urban greening strategies, cooling infrastructure placement, and health risk reduction measures in vulnerable districts.
 
@@ -33,9 +42,9 @@ In the Podravje context, this means that flood hazard outputs support zoning, in
 
 #### Description and context
 
-The Podravje Region is exposed to two main types of flooding: fluvial flooding from the Drava River and its tributaries, and pluvial flooding resulting from intense rainfall events. Both hazards affect urban areas such as Maribor and Ptuj, as well as surrounding agricultural lowlands. Historic events have caused significant damage to farmland, settlements, transport infrastructure, and cultural heritage.
+The Podravje Region is exposed to two main types of flooding: **fluvial flooding** from the Drava River and its tributaries, and **pluvial flooding** resulting from intense rainfall events. Both hazards affect urban areas such as Maribor and Ptuj, as well as surrounding agricultural lowlands. Historic events have caused significant damage to farmland, settlements, transport infrastructure, and cultural heritage.
 
-Climate projections indicate an increased frequency of extreme precipitation, which will likely amplify both flood extent and depth in the future. The regional adaptation strategy promotes Nature-Based Solutions (NbS) and Blue-Green Infrastructure (BGI), for example restoration of wetlands and riparian zones along the Drava River to reduce flood risk and enhance biodiversity.
+Climate projections indicate an increased frequency of extreme precipitation, which will likely amplify both flood extent and depth in the future. The regional adaptation strategy promotes **Nature-Based Solutions (NbS) and Blue-Green Infrastructure (BGI)**, for example restoration of wetlands and riparian zones along the Drava River to reduce flood risk and enhance biodiversity.
 
 | Dimension             | Indicator(s)                                                               | Unit            | Purpose                                                              |
 | --------------------- | -------------------------------------------------------------------------- | --------------- | -------------------------------------------------------------------- |
@@ -44,37 +53,41 @@ Climate projections indicate an increased frequency of extreme precipitation, wh
 
 Table 1 – key indicators tracked — Flood Hazard
 
-Figure 1 – example of flood risk map for Flood map Slovenia – river Drava in its downstream in Slovenia.
+<figure><img src="../.gitbook/assets/SLO-Podravje Region_draft2_media_image1.png" alt=""><figcaption><p>Figure 1 – example of flood risk map for Flood map Slovenia – river Drava in its downstream in Slovenia.</p></figcaption></figure>
+
+
 
 #### Data sources and tools
 
-Flood risk assessment in Podravje relies on an integrated set of hydrological, topographic, and land use datasets.
+Flood risk assessment in Podravje relies on an integrated set of **hydrological, topographic**, and **land use** datasets.
 
 Hydrological data form the backbone of the workflow. The Slovenian Environment Agency (ARSO) provides estimation of a peak discharge at selected stations for specific return periods (e.g. 10, 100, 500 years) to be used directly in hydraulic models.
 
 Historical flood event records may also be consulted to validate hazard maps and identify vulnerable locations.
 
-High-resolution LiDAR-based Digital Terrain Models (1 m) provide the topographic base for hydraulic simulations and floodplain delineation, while land use and cover maps from the Slovenski INSPIRE system define runoff characteristics and support exposure analysis.
+High-resolution **LiDAR-based Digital Terrain Models (1 m)** provide the topographic base for hydraulic simulations and floodplain delineation, while land use and cover maps from the Slovenski INSPIRE system define runoff characteristics and support exposure analysis.
 
-For regional transferability or gap-filling, Copernicus DEM (10–30 m), Copernicus Climate Data Store hydrology-related impact indicators, and harmonized land cover datasets (CLCplus Backbone, Urban Atlas) may be explored.
+For regional transferability or gap-filling, **Copernicus DEM** (10–30 m), **Copernicus Climate Data Store** hydrology-related impact indicators, and harmonized land cover datasets (CLCplus Backbone, Urban Atlas) may be explored.
 
-| Data type                                        | Source                                                                                                                  | Role in workflow                                                                           | Open/EU alternative                                                                                                                                                                                                                                         |
-| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Annual max river discharge values                | [ARSO gauging stations](https://vode.arso.gov.si/hidarhiv/pov_arhiv_tab.php)                                            | Input to flood frequency analysis (if official extreme flood statistics are not available) | None (site-specific)                                                                                                                                                                                                                                        |
-| Historical flood event data and flood statistics | [ARSO publications](https://www.arso.gov.si/vode/podatki/)                                                              | Input for flood hazard maps                                                                | Copernicus [Hydrology-related climate impact indicators from 1970 to 2100 derived from bias adjusted European climate projections](https://cds.climate.copernicus.eu/datasets/sis-hydrology-variables-derived-projections?tab=overview) (daily values only) |
-| Digital Terrain Model (1 m LiDAR)                | [ARSO Geoportal](https://gis.arso.gov.si/evode/profile.aspx?id=atlas_voda_Lidar@Arso)                                   | Hydraulic model topography; floodplain delineation                                         | [Copernicus DEM](https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM) (10–30 m)                                                                                                  |
-| Land use / land cover                            | [Slovenski INSPIRE](https://eprostor.gov.si/imps/srv/eng/catalog.search#/metadata/49c8dd3a-e5db-4ed1-8bf1-e1b7def60dd0) | Exposed assets overlay                                                                     | Copernicus [Urban Atlas](https://land.copernicus.eu/en/products/urban-atlas), [CLCplus Backbone](https://land.copernicus.eu/en/products/clc-backbone)                                                                                                       |
-| Building Footprints                              | [Slovenski INSPIRE](https://eprostor.gov.si/imps/srv/eng/catalog.search#/metadata/9a8fd241-9162-407c-94e7-c98e05766881) | Exposed assets overlay, DTM correction to consider building presence                       | OpenStreetMap building layer ([vector, global](https://osmbuildings.org/)); Copernicus Urban Atlas (with building block heights)                                                                                                                            |
+| Data type                                        | Source                                                                                                                  | Role in workflow                                                                           | Open/EU alternative                                                                                                                                                                                                                                                                                                                                                               |
+| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Annual max river discharge values                | [ARSO gauging stations](https://vode.arso.gov.si/hidarhiv/pov_arhiv_tab.php)                                            | Input to flood frequency analysis (if official extreme flood statistics are not available) | None (site-specific)                                                                                                                                                                                                                                                                                                                                                              |
+| Historical flood event data and flood statistics | [ARSO publications](https://www.arso.gov.si/vode/podatki/)                                                              | Input for flood hazard maps                                                                | Copernicus [Hydrology-related climate impact indicators from 1970 to 2100 derived from bias adjusted European climate projections](https://cds.climate.copernicus.eu/datasets/sis-hydrology-variables-derived-projections?tab=overview) (daily values only)                                                                                                                       |
+| Digital Terrain Model (1 m LiDAR)                | [ARSO Geoportal](https://gis.arso.gov.si/evode/profile.aspx?id=atlas_voda_Lidar@Arso)                                   | Hydraulic model topography; floodplain delineation                                         | [Copernicus DEM](https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM) (10–30 m)                                                                                                                                                                                                                        |
+| Land use / land cover                            | [Slovenski INSPIRE](https://eprostor.gov.si/imps/srv/eng/catalog.search#/metadata/49c8dd3a-e5db-4ed1-8bf1-e1b7def60dd0) | Exposed assets overlay                                                                     | Copernicus [Urban Atlas](https://land.copernicus.eu/en/products/urban-atlas), [CLCplus Backbone](https://land.copernicus.eu/en/products/clc-backbone)                                                                                                                                                                                                                             |
+| Building Footprints                              | [Slovenski INSPIRE](https://eprostor.gov.si/imps/srv/eng/catalog.search#/metadata/9a8fd241-9162-407c-94e7-c98e05766881) | Exposed assets overlay, DTM correction to consider building presence                       | <p>OpenStreetMap building layer (<a href="https://osmbuildings.org/">vector, global)</a></p><p> </p><p>Copernicus <a href="https://land.copernicus.eu/en/products/urban-atlas">Urban Atlas </a>(harmonised land use and land cover maps as well as information on <a href="https://land.copernicus.eu/en/products/urban-atlas?tab=building_height">building block heights</a></p> |
 
 Table 3 – used data, an alternative dataset to replicate the assessment outside the study area, when available
 
 {% hint style="info" %}
+**Climate change effects in hydrological extremes**
+
 Although the current workflow does not incorporate official climate projections, a first approximation of future flood hazards, if not available from local studies, may be derived using open datasets from the Copernicus Climate Data Store. These include bias-adjusted impact indicators such as daily river discharge extremes under different climate scenarios (e.g. RCP 8.5).
 
 A practical example of this approach has been implemented [here](https://www.euspa.europa.eu/newsroom-events/success-stories/copernicus-hydropower-flood-assessments) for a hydropower site in Switzerland, where Copernicus climate projections, coupled with limited gauging station statistics for basic downscaling, were used to estimate future 100-year flood discharges and run simplified hydraulic simulations to assess potential downstream impacts. The methodology explores how to use Copernicus datasets to create a preliminary “climate-adjusted” flood map.
 {% endhint %}
 
-The following tools, both proprietary and open-source, can be used in the Podravje flood hazard workflow:
+The **following tools**, both proprietary and open-source, can be used in the Podravje flood hazard workflow to acquire, process, and model hydrological and spatial data, to generate decision-ready outputs and replicate the assessment in other regions:
 
 | Tool                                                                                                                         | Type        | Role                                                                             |
 | ---------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------------------------------------------------------------------------- |
@@ -84,31 +97,37 @@ The following tools, both proprietary and open-source, can be used in the Podrav
 | [QGIS](https://qgis.org/)                                                                                                    | Open        | Spatial analysis, mapping, and hazard–exposure overlay                           |
 | [ArcGIS Pro](https://www.esri.com/en-us/arcgis/products/arcgis-pro/overview)                                                 | Proprietary | Spatial analysis, mapping, and hazard–exposure overlay                           |
 
-Table 2 – used tools and role in the Flood Hazard workflow
+Table 2 – used tools and role in the Flood Hazard workflow, when available a free similar alternative to proprietary solutions is provided.
 
 #### Methodology
 
 {% stepper %}
 {% step %}
-### Data acquisition and preparation
+### Step 1 - Data acquisition and preparation
 
-* Download local hydrological time series of maximum peak flood or official floods statistics for target stations. These will be used for local flood model input (“design events”).
-* Using GIS tools prepare terrain from high-resolution LiDAR DTM (e.g., mosaic tiles in the area of interest, enforce structures such as buildings). Note: LiDAR datasets have no information on underwater topography; this may be derived from local bathymetric surveys or estimated where unavailable.
-* Harmonize land use/cover for roughness and exposure in GIS. Depending on the flood modeling tool, this layer may serve as a basemap to assign surface roughness values.
-* Gather boundary conditions for upstream inflows (peak flow for assigned return time of interest), tributaries if present, and downstream conditions (e.g., energy slope).
+Download local hydrological time series of maximum peak flood or directly official floods statistics for target stations. Thes will be used for local flood model input (“design events”)
 
-Figure 2 – example of Lidar DTM from ARSO geoportal compared to satellite map, obstacles such as buildings and trees are filtered from the terrain surface. Underwater topography is not represented.
+&#x20;Using GIS tools prepare terrain from high resolution LiDAR DTM (e.g. mosaic tiles in the area of interest, enforce structures such as buildings). Please note that Lidar datasets have no information on underwater topography (Figure 2), this may be derived from local bathymetric surveys or, in the worst case, estimated.
+
+&#x20;Harmonize land use/cover for roughness and exposure in GIS. Depending on the flood modeling tool you are using, this layer may serve as a basemap to assign surface roughness values as well
+
+&#x20;Gather boundary conditions for upstream inflows (peak flow for assigned return time of interest), tributaries if present and downstream conditions (e.g. energy slope).
+
+<figure><img src="../.gitbook/assets/SLO-Podravje Region_draft2_media_image3.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/SLO-Podravje Region_draft2_media_image2.png" alt=""><figcaption><p>Figure 2 – example of Lidar DTM from ARSO geoportal compared to satellite map, obstacles such as buildings and trees are filtered from the terrain surface. Underwater topography is not represented.</p></figcaption></figure>
+
+
 {% endstep %}
 
 {% step %}
-### Model setup and run
+### Strep 2 - Model setup and run
 
-* Define the hydraulic domain and scheme (1D/2D/coupled) with a stable mesh; assign Manning’s n from land-use classes.
-* Configure steady or unsteady simulations depending on hydrological input and computational resources. Use local hardware for small/medium simulations or cloud platforms for large-scale, data-intensive runs.
-* Import topography (DTM) and modify it to consider underwater topography and relevant structures (levees, weirs, bridges). Refer to the flood modeling tool manual for specifics.
-* If reference maps or observed stages are available, calibrate the model to reproduce observed events, then run design events (e.g., 10, 100, 500-year) to produce maximum water surface, depth, and velocity rasters.
+Define the hydraulic domain and scheme (1D/2D/coupled) with a stable mesh; assign Manning’s n from land-use classes. Configure steady or unsteady simulations depending on the hydrological input available and your time computation resources constraint. Depending on the model complexity and data volume, this may involve use of local hardware, for smaller-scale or less complex simulation or Cloud-Based Platform, for large-scale, data-intensive simulations requiring significant computational power.
 
-Figure 3 – example of DTM imported in a flood Modeling tools (left) and roughness coefficient assigned over an imported land use map (right), generic urban area.
+&#x20;Import topography (DTM) and modify it to consider underwater topography, presence of structures such as levees of relevant hydraulic structures (such as weirs or bridges) m please refer to the flood modeling tool manual for details.
+
+<figure><img src="../.gitbook/assets/SLO-Podravje Region_draft2_media_merge_figura3.png" alt=""><figcaption><p>Figure 3 – example of DTM imported in a flood Modeling tools (lefts) and roughness coefficient assigned over an imported land use map (right), generic urban area.</p></figcaption></figure>
 {% endstep %}
 
 {% step %}

@@ -12,7 +12,6 @@
 * [Implementation Guidelines](implementationguidelines.md)
 * [Arcadia Regions  Guidelines/Tutorials TBC](casestudies/README.md)
   * [Emilia-Romagna (Italy) Case Study](casestudies/emilia-romagna.md)
-  * [Page 1](casestudies/page-1.md)
   * [den lab2vej draft2](casestudies/den-lab2vej-draft2.md)
   * [aut lab3 heatstress draft2](casestudies/aut-lab3-heatstress-draft2.md)
   * [aut lab1 er dr draft2](casestudies/aut-lab1-er-dr-draft2.md)

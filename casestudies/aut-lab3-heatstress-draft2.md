@@ -37,7 +37,7 @@ The aim is to support **urban planning, public health strategies, and climate ad
 {% hint style="info" %}
 **Disclaimer**
 
-This tutorial is intended as a general workflow example and does not replace software-specific documentation (e.g., GIS, heatwave modelling tools user/technical manuals). Users should already be familiar with the relevant geospatial data formats, data pre-processing techniques, and modelling concepts, as well as with the specific input/output requirements and run functionalities of the modelling software before attempting to replicate this workflow.
+_This tutorial is intended as a general workflow example and does not replace software-specific documentation (e.g., GIS, heatwave modelling tools user/technical manuals). Users should already be familiar with the relevant geospatial data formats, data pre-processing techniques, and modelling concepts, as well as with the specific input/output requirements and run functionalities of the modelling software before attempting to replicate this workflow._
 {% endhint %}
 
 #### CRA objectives

@@ -128,31 +128,42 @@ Define the hydraulic domain and scheme (1D/2D/coupled) with a stable mesh; assig
 &#x20;Import topography (DTM) and modify it to consider underwater topography, presence of structures such as levees of relevant hydraulic structures (such as weirs or bridges) m please refer to the flood modeling tool manual for details.
 
 <figure><img src="../.gitbook/assets/SLO-Podravje Region_draft2_media_merge_figura3.png" alt=""><figcaption><p>Figure 3 – example of DTM imported in a flood Modeling tools (lefts) and roughness coefficient assigned over an imported land use map (right), generic urban area.</p></figcaption></figure>
+
+If you have reference maps (e.g. Figure 1) or observed stages corresponding to observed flows you may first calibrate your model to reproduce such event, then run design events (e.g., 10, 100, 500-year) to produce maximum water surface, depth, and velocity raster.
+
+{% hint style="info" %}
+**Note: river modeling**
+
+&#x20;**Where no detailed modeling of the river is possible** nor of interest (e.g. for lack of river cross sections or presence of stable embankments) an alternative approach is estimating **flood volume outside of the river** (e.g. a fraction of the expected event volume in the river) and simulating a flood domain outside of the river , as in the example of Figure 7
+{% endhint %}
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Figure 4 – example of flood maps for a generic lowland area, derived by 2d Modeling of estimated flood volumes outside of the river , courtesy of <a href="https://saferplaces.co/rimini-and-climate-change-the-added-value-of-the-sea-park-parco-del-mare/">SaferPlaces</a> platform.</p></figcaption></figure>
 {% endstep %}
 
 {% step %}
-### Analysis and interpretation
+### Step 3 - Analysis and interpretation
 
-* Post-process water depth rasters and (optionally) velocity maps in a GIS to plot extent and classify hazard (e.g., water depth ranges).
-* Overlay hazard with buildings, infrastructure, land use, or other exposure layers (e.g., population) to quantify potential losses and social impacts, including affected populations and critical infrastructure.
+Post-process water depth raster maps, eventually velocity maps may be loaded into GIS environment to plot extent and to classify hazard (e.g. water depth ranges)
+
+&#x20;Overlay hazard with buildings, infrastructure, land use or other relevant exposure layers (e.g. population) to quantifying potential losses and social impacts, including affected populations and critical infrastructure.
+
+
 {% endstep %}
 
 {% step %}
-### NbS testing for fluvial mitigation
+### Step 4 - NbS testing for fluvial mitigation
 
-* Screen reaches for floodplain reconnection, riparian and wetland restoration, levee setback or retention areas.
-* Implement simple what-if runs to include NbS modifications in the flood model and compare baseline vs NbS options.
-* Use GIS to derive performance indicators and statistics such as peak stage reduction, flooded area change, and number of exposed assets.
+Screen reaches for floodplain reconnection, riparian and wetland restoration, levee flood protection areas
+
+&#x20;Implement simple what-if runs or scenario including presence of Nbs modification in the flood model (step 2,) to compare baseline vs NbS options
+
+Eventually, I use GIS to derive performance indicators and statistics such as peak stage reduction, flooded area change, and number of exposed assets.
+
+
 {% endstep %}
 {% endstepper %}
 
-{% hint style="info" %}
-Where no detailed modeling of the river is possible (e.g., lack of river cross sections or presence of stable embankments), an alternative approach is estimating flood volume outside of the river (e.g., a fraction of the expected event volume in the river) and simulating a flood domain outside of the river, as shown in Figure 4.
-{% endhint %}
 
-Figure 4 – example of flood maps for a generic lowland area, derived by 2D modeling of estimated flood volumes outside of the river, courtesy of [SaferPlaces](https://saferplaces.co/rimini-and-climate-change-the-added-value-of-the-sea-park-parco-del-mare/).
-
-Optionally, derive climate-adjusted variants by scaling design flows with CDS indicators consistent with local gauges.
 
 ### Heatwave Hazard – Podravje Region
 
@@ -162,13 +173,17 @@ The Podravje Region experiences increasingly frequent and intense heatwaves, wit
 
 These conditions pose health risks, especially for vulnerable populations (elderly, children, people with pre-existing health conditions), reduce thermal comfort, and exacerbate energy demand for cooling. Climate projections indicate a further increase in the frequency, intensity, and duration of heatwave events in the coming decades.
 
-Historical climate data show warming trends in Slovenia. The comparison of average July temperatures between the periods 1971–2000 and 1981–2010 reveals a consistent increase across the country. These patterns underline the relevance of heatwave and UHI assessments in the Podravje Region.
+Historical climate data already show clear warming trends in Slovenia. The comparison of average July temperatures between the periods 1971–2000 and 1981–2010 reveals a consistent increase across the country, while the deviation map highlights areas with the most pronounced anomalies. These patterns underline the growing relevance of heatwave and UHI assessments in the Podravje Region (Figure 2,Figure 3).
 
-Figure 5 - Deviation of average temperature in Slovenia.
+<figure><img src="../.gitbook/assets/SLO-Podravje Region_draft2_media_image8.png" alt=""><figcaption><p>Figure 5 - Deviation of average temperature in Slovenia.</p></figcaption></figure>
 
-Figure 6 - Comparison of average temperature in July (left period 1971-2000, right: period 1981-2010)
+<figure><img src="../.gitbook/assets/SLO-Podravje Region_draft2_media_image9.png" alt=""><figcaption></figcaption></figure>
 
-Adaptation strategies for the heatwave hazard focus on Nature-Based Solutions (NbS) and Blue-Green Infrastructure (BGI) to mitigate the UHI effect, including expansion of urban tree canopy, creation of green corridors, installation of green roofs and walls, and integration of water features for evaporative cooling.
+<figure><img src="../.gitbook/assets/SLO-Podravje Region_draft2_media_image10.png" alt=""><figcaption><p>Figure 6 -Comparison of average temperature in July (left period 1971-2000, right: period 1981-2010)</p></figcaption></figure>
+
+
+
+Adaptation strategies for the heatwave hazard focus on **Nature-Based Solutions (NbS) and Blue-Green Infrastructure (BGI)** to mitigate the UHI effect, including expansion of urban tree canopy, creation of green corridors, installation of green roofs and walls, and integration of water features for evaporative cooling.
 
 | Dimension                | Indicator(s)                                   | Unit     | Purpose                                     |
 | ------------------------ | ---------------------------------------------- | -------- | ------------------------------------------- |
@@ -179,35 +194,44 @@ Table 4 – key indicators tracked — UHI Hazard
 
 #### Data sources and tools
 
-Assessment of heatwave risk and UHI patterns in Podravje requires meteorological, remote sensing, and land use datasets.
+Assessment of heatwave risk and UHI patterns in Podravje requires a combination of meteorological, remote sensing, and land use datasets.
 
-* Meteorological data from ARSO provide daily maximum and mean air temperatures, humidity, wind speed, and solar radiation for identifying extreme heat events and calculating indices.
-* Remote sensing data (Landsat, Sentinel-3) supply Land Surface Temperature (LST) maps to detect UHI intensity.
-* Land use and morphology datasets, including building footprints and heights (Slovenski INSPIRE, Urban Atlas), help analyze spatial configuration of heat hotspots.
-* For future projections, bias-adjusted datasets from the Copernicus Climate Data Store offer temperature scenarios aligned with regional models.
+\
+**Meteorological data** from ARSO provide daily maximum and mean air temperatures, as well as humidity, wind speed, and solar radiation, enabling the identification of extreme heat events and the calculation of relevant indices.
 
-Example datasets:
+**Remote sensing data**, such as Landsat and Sentinel-3 imagery, supply Land Surface Temperature (LST) maps to detect and quantify UHI intensity.
 
-| Data type                              | Source                                                                                                                                        | Role in workflow                                                               | Open/EU alternative                                                                                                                                                                                                                                               |
-| -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Digital Terrain Model (1 m LiDAR)      | [ARSO Geoportal](https://gis.arso.gov.si/evode/profile.aspx?id=atlas_voda_Lidar@Arso)                                                         | Base terrain morphology for heat modeling                                      | No open alternative at required resolution; check national/regional geoportals                                                                                                                                                                                    |
-| Digital Surface Model (DSM)            | Derived from LiDAR LAS files (ARSO Geoportal)                                                                                                 | Represent building and vegetation heights                                      | —                                                                                                                                                                                                                                                                 |
-| Hourly temperature & climate variables | ARSO meteorological network                                                                                                                   | Meteo input to heat stress analysis                                            | Copernicus [ERA5-Land hourly data](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land?tab=download); [Heat waves and cold spells derived from climate projections](https://cds.climate.copernicus.eu/datasets/sis-heat-and-cold-spells?tab=overview) |
-| Land Surface Temperature (LST)         | Satellite imagery (Landsat, Sentinel)                                                                                                         | Map UHI via thermal imaging                                                    | [Landsat8 LST resources](https://rslab.gr/Landsat_LST.html)                                                                                                                                                                                                       |
-| Land use / land cover                  | [Slovenski INSPIRE](https://eprostor.gov.si/imps/srv/eng/catalog.search#/metadata/49c8dd3a-e5db-4ed1-8bf1-e1b7def60dd0)                       | UHI drivers and green areas                                                    | Copernicus [Urban Atlas](https://land.copernicus.eu/en/products/urban-atlas), [CLCplus Backbone](https://land.copernicus.eu/en/products/clc-backbone)                                                                                                             |
-| Building Footprints                    | [Slovenski INSPIRE metapodatkovni sistem](https://eprostor.gov.si/imps/srv/eng/catalog.search#/metadata/9a8fd241-9162-407c-94e7-c98e05766881) | Local topography modification in detailed modeling; building height estimation | OpenStreetMap building layer ([vector, global](https://osmbuildings.org/)); Copernicus Urban Atlas (building block heights, street trees)                                                                                                                         |
-| Population                             | @                                                                                                                                             | Overlay to heat stress to detect where UHI exacerbate public health risks      | [WorldPop Hub](https://dx.doi.org/10.5258/SOTON/WP00646)                                                                                                                                                                                                          |
-| Vegetation                             | @ (height assigned via DSM–DTM difference)                                                                                                    | Map vegetation to estimate vegetation height when no DSM is available          | Copernicus High Resolution Layer [Tree Cover and Forests](https://land.copernicus.eu/en/products/high-resolution-layer-forests-and-tree-cover) (10 m raster)                                                                                                      |
+**Land use and morphology dataset**s, including building footprints and heights (Slovenski INSPIRE, Urban Atlas), are used to analyze the spatial configuration of heat hotspots.\
+For future climate projections, bias-adjusted datasets from the **Copernicus Climate Data Store** offer temperature scenarios aligned with regional climate models.
+
+&#x20;
+
+Following table illustrates example datasets
+
+| Data type                              | Source                                                                                                                                                                                                            | Role in workflow                                                                       | Open/EU alternative                                                                                                                                                                                                                                                                                                                               |
+| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Digital Terrain Model (1 m LiDAR)      | [ARSO Geoportal](https://gis.arso.gov.si/evode/profile.aspx?id=atlas_voda_Lidar@Arso)                                                                                                                             | Base terrain morphology for heat modeling                                              | No open alternative at required resolution; check national/regional geoportals                                                                                                                                                                                                                                                                    |
+| Digital Surface Model (DSM)            | Derived from original LiDAR LAS files available on the [ARSO Geoportal](file:///D:/.shortcut-targets-by-id/10GqWnq1r-d6w-EvTPYcqRYDOdBPwaq_D/17_R\&D_ARCADIA_HORIZ_GIS_10112023_S/WP8/Tutorials/ARSO%20Geoportal) | Required for representing building and vegetation heights in heat modelling            | —                                                                                                                                                                                                                                                                                                                                                 |
+| Hourly temperature & climate variables | ARSO meteorological network                                                                                                                                                                                       | Provide Meteo input to heat stress an analysis, see note on the meteorological inputs  | Copernicus [ERA5-Land hourly data](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land?tab=download); [Heat waves and cold spells derived from climate projections](https://cds.climate.copernicus.eu/datasets/sis-heat-and-cold-spells?tab=overview)                                                                                 |
+| Land Surface Temperature (LST)         | Satellite imagery (Landsat, Sentinel)                                                                                                                                                                             | Map UHI presence via Satellite-Based Thermal Imagingg                                  | [Landsat8 LST resources](https://rslab.gr/Landsat_LST.html)                                                                                                                                                                                                                                                                                       |
+| Land use / land cover                  | [Slovenski INSPIRE](https://eprostor.gov.si/imps/srv/eng/catalog.search#/metadata/49c8dd3a-e5db-4ed1-8bf1-e1b7def60dd0)                                                                                           | UHI drivers and green areas                                                            | Copernicus [Urban Atlas](https://land.copernicus.eu/en/products/urban-atlas), [CLCplus Backbone](https://land.copernicus.eu/en/products/clc-backbone)                                                                                                                                                                                             |
+| Building Footprints                    | [Slovenski INSPIRE metapodatkovni sistem](https://eprostor.gov.si/imps/srv/eng/catalog.search#/metadata/9a8fd241-9162-407c-94e7-c98e05766881)                                                                     | Local topography modification in detailed modeling; building height shall be estimated | OpenStreetMap building layer ([vector, global](https://osmbuildings.org/)); Copernicus [Urban Atlas ](https://land.copernicus.eu/en/products/urban-atlas)(harmonised land use and land cover maps as well as information on [building block heights](https://land.copernicus.eu/en/products/urban-atlas?tab=building_height) and street trees for |
+| Population                             | @                                                                                                                                                                                                                 | Overlay to heat stress to detect where UHI exacerbate public health risks              | [WorldPop Hub](https://dx.doi.org/10.5258/SOTON/WP00646)                                                                                                                                                                                                                                                                                          |
+| Vegetation                             | @ (height assigned via DSM–DTM difference)                                                                                                                                                                        | Map vegetation to estimate vegetation height when no DSM is available                  | Copernicus High Resolution Layer [Tree Cover and Forests](https://land.copernicus.eu/en/products/high-resolution-layer-forests-and-tree-cover) (10 m raster)                                                                                                                                                                                      |
 
 Table 3 – used data, alternative datasets where available
 
+{% hint style="info" %}
 **Meteorological inputs**
 
-Meteorological input requirements and formatting vary by modelling code. For UHI simulations with UMEP, required variables include air temperature, dew point or relative humidity, surface pressure, wind speed and direction, shortwave radiation (global, diffuse and direct), longwave radiation, precipitation, and cloud cover. UMEP relies on the EPW format (EnergyPlus Weather). EPW files can be downloaded from several sources or generated from reanalysis datasets such as ERA5(-Land). Users are encouraged to download the file closest to their location and adapt it with local meteorological data so the weather inputs reflect actual conditions.
+_Meteorological input requirements and formatting vary depending on the modelling code used. For UHI simulations with UMEP (Table 2), the required variables include air temperature, dew point or relative humidity, surface pressure, wind speed and direction, shortwave radiation (global, diffuse and direct), longwave radiation, precipitation, and cloud cover. UMEP relies on the **EPW format (EnergyPlus Weather).** EPW files are “typical meteorological dataset with a typical year” and be downloaded from several sources (e.g. EnergyPlus , EPWmap ) or generated from reanalysis datasets such as **ERA5(-Land).** Users are encouraged to download the file closest to their location and **adapt it with local meteorological** data, so that the weather inputs reflect the actual conditions of the study area._
 
-Free tools are available to inspect and modify EPW files, such as [Elements](https://bigladdersoftware.com/projects/elements/). Read the official UMEP documentation and tutorials to adjust EPW variables appropriately.
+_Free tools are available to inspect and modify EPW files, such as_ [_Elements_](https://bigladdersoftware.com/projects/elements/)_. We recommend changing the epw file after reading  the official **UMEP documentation and tutorial example**s (Table 2)  to adjust the variables, ensuring that the file accurately represents both the local climate data and the modelling requirements._
+{% endhint %}
 
-Tools for the UHI workflow:
+
+
+The following tools, combining GIS platforms, remote sensing processors, and urban climate modelling software, can be used in the Podravje heatwave workflow to process temperature and land cover data, map UHI patterns, and test the effectiveness of mitigation strategies under current and projected climate scenarios.
 
 | Tool                                                                                                         | Type        | Role                                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------ | ----------- | ---------------------------------------------------------------------------------------------------------------------- |
@@ -222,42 +246,60 @@ Table 2 – used tools and role in the UHI workflow
 
 {% stepper %}
 {% step %}
-### Data acquisition and preparation
+### Step 1  - Data acquisition and preparation
 
-* Obtain historical temperature and humidity series from ARSO to define baseline conditions and detect past extreme heat events.
-* Acquire land use and land cover layers (Slovenski INSPIRE or Copernicus Urban Atlas), including vegetation cover, building footprints, and building heights derived from DSM generated from LiDAR LAS files.
-* Add population datasets (e.g., WorldPop) to assess exposure and identify vulnerable communities.
-* Convert all datasets into GIS-compatible formats.
-* Retrieve cloud-free Landsat-derived LST images for peak summer periods. In GIS, classify LST values into temperature ranges (e.g., < 25 °C, 25–35 °C, > 45 °C) to produce a first proxy map of UHI zones.
-* Reformat layers to match the chosen modelling framework (e.g., classify land cover, generate DTM/DSM, attribute building polygons with height/materials, prepare hourly meteorological series).
+Obtain historical temperature and humidity series from **ARSO** to define baseline climatic conditions and detect past extreme heat events. Complement these with **land use and land cover** layers from Slovenski INSPIRE or Copernicus Urban Atlas, including vegetation cover, building footprints, and building heights derived from **DSM generated from LiDAR LAS** files. Add **population datasets** (e.g., WorldPop) to assess exposure and identify vulnerable communities. All datasets should be converted into a GIS-compatible format.
+
+Retrieve **cloud-free Landsat-derived Land Surface Temperature (LST) i**mages for peak summer periods (Figure 7). In GIS, classify LST values into indicative temperature ranges (e.g., < 25 °C, 25–35 °C, > 45 °C) to produce a first proxy map of UHI zones.
+
+&#x20;For microclimate modelling, these layers often require reformatting to match the input structure of the chosen modelling framework (e.g., ENVI-met, UMEP). This includes:
+
+* Classifying land cover into model-compatible categories
+* Generating continuous DTM and DSM surfaces
+* Attributing building polygons with height and material properties
+* Preparing hourly meteorological series in the correct format
+
+&#x20;
+
+These pre-processing operations can be performed manually in GIS or using dedicated utilities integrated in the modelling framework. For instance, the **UMEP plugin for QGIS** offers functions to extract urban form parameters, generate input grids, and prepare weather files for the Urban
+
+<figure><img src="../.gitbook/assets/SLO-Podravje Region_draft2_media_image11.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/SLO-Podravje Region_draft2_media_image12.png" alt=""><figcaption><p>Figure 7- an example of LST [°C] Satellite map from Landsat 8 image for July 2025 loaded and classified in GIS, at the bottom overlay of the map with over 65 population density map from <a href="https://hub.worldpop.org/">WorlpopoHUB</a>.</p></figcaption></figure>
 
 Figure 7 – example of LST \[°C] Satellite map from Landsat 8 image for July 2025 loaded and classified in GIS, with population density overlay.
 {% endstep %}
 
 {% step %}
-### Analysis and mapping
+### Step 2  - Analysis and mapping
 
-* Map near-surface air temperature and compute anomalies between urban cores and surrounding rural areas to map UHI intensity and extent.
-* Overlay UHI maps with demographic layers to locate clusters of vulnerable populations.
-* Produce thematic layers showing spatial patterns of thermal stress and relationships with physical drivers (vegetation cover, building density, land cover, population distribution). These layers identify priority areas for mitigation.
+Using the prepared datasets,  map near surface air temperature  and eventually valuate  anomalies between urban cores and their surrounding rural areas(Figure 7, Figure 8) to map the intensity and extent of UHI zones.
+
+In GIS, you re able overlay these UHI maps with demographic layers to locate clusters of vulnerable populations.
+
+&#x20;The outputs of this stage typically include thematic layers visualizing **spatial patterns of thermal stress and their relationship with key physical drivers** such as vegetation cover, building density, land cover type, and **population distribution**. These maps form the basis for identifying priority areas for targeted mitigation measures.
 {% endstep %}
 
 {% step %}
-### Baseline urban climate modelling
+### Step 3 - Baseline urban climate modelling
 
 * Import pre-processed land cover, vegetation, and morphology grids into the chosen modelling framework.
 * Integrate meteorological time series representative of identified heatwave periods.
 * Parameterize urban form (building heights, materials, vegetation characteristics) to reflect present-day conditions.
 * Use satellite-derived LST maps and temperature anomaly layers to cross-check model outputs and validate simulated baseline conditions.
 
-Figure 8 – example of temperature difference in mean ground temperature \[°C] for an urban area simulated with UMEP.
+<figure><img src="../.gitbook/assets/SLO-Podravje Region_draft2_media_image13.png" alt=""><figcaption><p>Figure 8 – example of temperature difference in mean ground temperature [°C] for an urban area simulated with UMEP.</p></figcaption></figure>
+
+
 {% endstep %}
 
 {% step %}
-### NbS scenario testing
+### Step 4 - NbS scenario testing
 
-* Repeat baseline modelling including Nature-Based Solutions (increase urban tree canopy, create green corridors, install green roofs/walls, apply reflective materials).
-* Configure scenarios in the modelling framework to quantify cooling effects under present and projected future climates (e.g., downscaled Copernicus CDS scenarios).
-* Compare scenario outputs with baseline to evaluate changes in maximum temperatures, reduction of UHI hotspot extent, and improvements in thermal comfort indices. Integrate observed thermal maps to validate simulated changes where relevant.
+Repeat the baseline modelling from Step 3, incorporating Nature-Based Solutions identified in regional adaptation strategies, such as increasing urban tree canopy, creating green corridors, installing green roofs and walls, or applying reflective surface materials. Configure each scenario within the chosen modelling framework to quantify cooling effects under both present-day conditions and projected future climates (e.g., using downscaled scenarios from Copernicus CDS).
+
+&#x20;
+
+Outputs should allow direct comparison with the baseline, evaluating changes in maximum temperatures, reduction of UHI hotspot extent, and improvements in thermal comfort indices. If relevant, integrate observed thermal maps from Step 2 to validate simulated changes and ensure scenario realism.
 {% endstep %}
 {% endstepper %}

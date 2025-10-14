@@ -21,7 +21,7 @@
   * [Krapina-Zagorje region in Croatia](casestudies/krapina-zagorje-region-in-croatia.md)
   * [Skåne region in Sweden - Lab2](casestudies/skane-region-in-sweden-lab2.md)
   * [Podravje, Slovenia](casestudies/podravje-slovenia.md)
-* [BGSNBS Guidelines](bgsnbs-guidelines.md)
+* [Guidelines on NBS and BGI](guidelines-on-nbs-and-bgi.md)
 * [References](references.md)
 * [test](test.md)
 * [CRA Workflow](cra-workflow/README.md)

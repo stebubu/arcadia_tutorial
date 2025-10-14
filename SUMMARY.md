@@ -15,7 +15,7 @@
   * [Funen region in Denmark - Lab2](casestudies/funen-region-in-denmark-lab2.md)
   * [aut lab3 heatstress draft2](casestudies/aut-lab3-heatstress-draft2.md)
   * [aut lab1 er dr draft2](casestudies/aut-lab1-er-dr-draft2.md)
-  * [den lab1 vollsmose draft2](casestudies/den-lab1-vollsmose-draft2.md)
+  * [Funen region in Denmark - Lab1](casestudies/funen-region-in-denmark-lab1.md)
   * [cro krapina zagorje draft2](casestudies/cro-krapina-zagorje-draft2.md)
   * [er lab1 landsl draft2](casestudies/er-lab1-landsl-draft2.md)
   * [swe lab2hel bgi draft2](casestudies/swe-lab2hel-bgi-draft2.md)

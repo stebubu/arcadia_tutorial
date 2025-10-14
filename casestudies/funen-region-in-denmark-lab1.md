@@ -1,10 +1,12 @@
-# den lab1 vollsmose draft2
+# Funen region in Denmark - Lab1
 
 ### Introduction and Objectives of the Climate Risk Assessment
 
 #### Regional context
 
 The [Vollsmose](https://en.wikipedia.org/wiki/Vollsmose) district, located in the city of [Odense](https://english.odense.dk/), Denmark, is a dense urban neighbourhood currently undergoing a major renewal programme. The area faces multiple water-related risks linked to changing **rainfall patterns, shallow groundwater, and diffuse surface pollution.**
+
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 High-intensity precipitation events frequently exceed the drainage system’s capacity, leading to pluvial flooding. Elevated groundwater levels reduce the effectiveness of sewers and increase flood susceptibility. Untreated runoff entering local water bodies contributes to water quality degradation, threatening aquatic habitats and urban livability.
 

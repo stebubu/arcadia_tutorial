@@ -31,6 +31,10 @@ This section should provide templates or worksheets for conducting the assessmen
 
 The climate risk assessment framework for each Innovation Lab across the Arcadia Regions has been defined after thorough consultation and is illustrated in the image below.
 
+
+
+<figure><img src=".gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+
 To ensure a comprehensive evaluation:
 
 * **Hazard Analysis:** Identify climate hazards specific to the region.

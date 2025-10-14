@@ -1,10 +1,12 @@
-# den lab2vej draft2
+# Funen region in Denmark - Lab2
 
 ### Introduction and Objectives of the Climate Risk Assessment
 
 #### Regional context
 
 The [Vejrup Å catchment](https://www.sdu.dk/en/forskning/arcadia/about-arcadia/arcadia-in-funen/lab2), located in eastern Funen within [Odense](https://english.odense.dk/) Municipality (with smaller parts in [Kerteminde](https://en.wikipedia.org/wiki/Kerteminde_Municipality) and [Faaborg-Midtfyn](https://www.fmk.dk/)), is mainly exposed **to coastal flooding from Odense Fjord**.
+
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 The area north of Kerteminde road is undergoing major land-use transitions: agricultural land is being converted into commercial developments, while low-lying coastal zones are designated for wetland and salt marsh restoration.
 

@@ -1,10 +1,14 @@
-# er lab1 landsl draft2
+# Emilia-Romagna Region in Italy -Lab1
 
 ### Introduction and Objectives of the Climate Risk Assessment
 
 #### Regional context
 
-[Emilia-Romagna](https://en.wikipedia.org/wiki/Emilia-Romagna), Northern Italy, spans the Northern Apennines and the Po Plain. Rainfall-induced shallow landslides concentrate along the Apennine foothills and mountain belts, where flysch and clay formations, steep slopes, road valleys, and forested catchments co-occur. Intense or prolonged rainfall is the primary trigger of shallow landslides, which normally involve soil depths up to 1 or 2 meters; [the May 2023 extreme rainfall event](https://essd.copernicus.org/articles/17/1055/2025/) is used in this Climate Risk Assessment as the reference for landslides back-analysis and model calibration. Exposure to landslides risk is high for municipal settlements, transport corridors, utilities, and productive forests located on slopes, and service disruptions are likely to occur in foothill municipalities.
+[Emilia-Romagna](https://en.wikipedia.org/wiki/Emilia-Romagna), Northern Italy, spans the Northern Apennines and the Po Plain. Rainfall-induced shallow landslides concentrate along the Apennine foothills and mountain belts, where flysch and clay formations, steep slopes, road valleys, and forested catchments co-occur.&#x20;
+
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+
+Intense or prolonged rainfall is the primary trigger of shallow landslides, which normally involve soil depths up to 1 or 2 meters; [the May 2023 extreme rainfall event](https://essd.copernicus.org/articles/17/1055/2025/) is used in this Climate Risk Assessment as the reference for landslides back-analysis and model calibration. Exposure to landslides risk is high for municipal settlements, transport corridors, utilities, and productive forests located on slopes, and service disruptions are likely to occur in foothill municipalities.
 
 <div align="left"><figure><img src="../.gitbook/assets/ER-Lab1_Landsl_draft2_media_image3.png" alt="" width="375"><figcaption></figcaption></figure></div>
 

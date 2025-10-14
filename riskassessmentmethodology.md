@@ -9,9 +9,9 @@ This module outlines the methodology for conducting a climate risk assessment. T
 * **Implementation Planning:** Develop a roadmap for action.
 * **Monitoring & Evaluation:** Define indicators to track performance.
 
-A core part of the toolbox is a standardized **risk assessment methodology** that cities and regions can follow. This methodology is rooted in international best practices (e.g. the IPCC framework) and ensures a comprehensive evaluation of risk. According to the IPCC, _“climate risk results from the interaction of hazard, exposure and vulnerability”_&#x200B;
+A core part of the toolbox is a standardized **risk assessment methodology** that cities and regions can follow. This methodology is rooted in international best practices (e.g. the IPCC framework) and ensures a comprehensive evaluation of risk. According to the IPCC, _“climate risk results from the interaction of hazard, exposure and vulnerability”_&#x200B; [iea.org](https://www.iea.org/reports/climate-resilience-policy-indicator/climate-hazard-assessment).&#x20;
 
-[iea.org](https://www.iea.org/reports/climate-resilience-policy-indicator/climate-hazard-assessment). Our toolbox guides users through assessing each of these dimensions:
+Our toolbox guides users through assessing each of these dimensions:
 
 1. **Hazard Assessment:** Identify and characterize the climate hazards of concern. Use data such as flood frequency curves, drought severity indices, fire weather indexes, or heatwave thresholds. For example, a city might assess the _100-year flood_ level or the number of _heatwave days per year_. The toolbox can include methods for both current climate conditions and future scenarios (e.g. mid-century projections under different emissions pathways).
 2. **Exposure Analysis:** Determine what people, infrastructure, and ecosystems are exposed to each hazard. This involves mapping assets and populations in hazard-prone areas. For instance, calculate the population living in a floodplain, the length of roads in high wildfire risk zones, or the number of hospitals and schools in areas prone to heatwaves. Data from local spatial plans or national databases (served via CKAN) can support this. Exposure can be quantified in terms of economic value, population counts, or critical facility counts.
@@ -26,3 +26,21 @@ Combining these, the methodology leads to a **risk evaluation**. This could be q
 * _Risk matrices and indices:_ if data is limited, a simpler ordinal ranking of risks can be used (combining likelihood and impact into categories).
 
 This section should provide templates or worksheets for conducting the assessment. For instance, a **Risk Assessment Worksheet** might walk through a flood risk example step-by-step (possibly using Emilia-Romagna data as a case): starting from identifying flood hazard zones, overlaying exposed assets, assessing their vulnerability (e.g. building quality), and then summarizing risk. Throughout, it will reference data sources (like “use the flood inundation map from CKAN dataset X”) and tools (like GIS software or a spreadsheet model). By following this methodology, users will identify which climate risks are most critical in their region, and have a baseline against which to plan adaptation measures.
+
+#### Climate Risk Assessment Framework
+
+The climate risk assessment framework for each Innovation Lab across the Arcadia Regions has been defined after thorough consultation and is illustrated in the image below.
+
+To ensure a comprehensive evaluation:
+
+* **Hazard Analysis:** Identify climate hazards specific to the region.
+* **Exposure Mapping:** Detail exposed populations, infrastructure, and ecosystems.
+* **Vulnerability Assessment:** Evaluate susceptibilities and coping capacities.
+* **Risk Evaluation:** Combine the above assessments to calculate risk levels.
+
+This framework serves as a guide to tailor specific strategies for climate adaptation, prioritizing actions that address the most critical risks.
+
+<figure><img src=".gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+
+
+

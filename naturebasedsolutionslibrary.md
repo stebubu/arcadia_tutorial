@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Nature-Based Solutions Library
 
 Nature-Based Solutions (NbS) protect, restore, or mimic natural processes to address climate risks. This library contains entries for:
@@ -6,8 +10,6 @@ Nature-Based Solutions (NbS) protect, restore, or mimic natural processes to add
 * **Wetland and Floodplain Restoration:** Enhancing natural water retention.
 * **Coastal & Riverine Restoration:** Improving natural buffers.
 * **Urban Tree Canopy Expansion:** Reducing heat islands and improving air quality.
-
-
 
 At the heart of the toolbox is a library of **Nature-Based Solutions** – a menu of strategies that leverage natural processes to reduce climate risks while providing co-benefits. According to the UNEA definition, NbS are _“actions to protect, conserve, restore, sustainably use and manage natural or modified ecosystems, which address social, economic and environmental challenges effectively and adaptively, while simultaneously providing human well-being and biodiversity benefits.”_&#x200B;
 
@@ -24,7 +26,7 @@ At the heart of the toolbox is a library of **Nature-Based Solutions** – a men
 * **Coastal Nature-Based Solutions:** _(If applicable to the region)_ Restoration of dunes, mangroves, salt marshes, or other coastal ecosystems to buffer against storm surges and sea-level rise. Even for an inland region, this can be relevant if there are river deltas or coastal zones (Emilia-Romagna has an Adriatic coastline). Natural coastal features attenuate waves and provide habitat, offering protection that grows over time as ecosystems mature, unlike static concrete seawalls.
 * **Other Ecosystem-based Adaptations:** This can include a variety of measures like **river restoration** (removing obsolete dams, improving flow for floods and droughts), **peatland restoration** (to retain water and carbon), **grassland conservation** (for wildfire management and grazing drought resilience), and **blue-green infrastructure networks** that connect various green spaces for cumulative benefits.
 
-&#x20;_Restoring natural wetlands and streams is a powerful NbS for flood and drought management. By allowing floodplains to retain water (as shown above), peak flows are reduced and groundwater is recharged, mitigating flood damages and providing water reserves for dry periods. Such approaches in rural areas of Emilia-Romagna could help buffer extreme rainfall events while enhancing biodiversity._
+_Restoring natural wetlands and streams is a powerful NbS for flood and drought management. By allowing floodplains to retain water (as shown above), peak flows are reduced and groundwater is recharged, mitigating flood damages and providing water reserves for dry periods. Such approaches in rural areas of Emilia-Romagna could help buffer extreme rainfall events while enhancing biodiversity._
 
 For each NbS type, the toolbox provides:
 

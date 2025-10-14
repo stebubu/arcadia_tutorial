@@ -1,13 +1,11 @@
 # Table of contents
 
 * [ARCADIA](README.md)
-* [Climate Risk Assessment Toolbox](climate-risk-toolbox.md)
 * [Summary](summary.md)
 * [Introduction](introduction.md)
 * [Risk Assessment Methodology](riskassessmentmethodology.md)
 * [Climate Risk Profiles](climateriskprofiles.md)
 * [Indicators and Data](indicatorsanddata.md)
-* [Nature-Based Solutions Library](naturebasedsolutionslibrary.md)
 * [Decision Support Tools](decisionsupporttools.md)
 * [Implementation Guidelines](implementationguidelines.md)
 * [Arcadia Regions  Guidelines/Tutorials TBC](casestudies/README.md)
@@ -22,6 +20,8 @@
   * [Skåne region in Sweden - Lab2](casestudies/skane-region-in-sweden-lab2.md)
   * [Podravje, Slovenia](casestudies/podravje-slovenia.md)
 * [Guidelines on NBS and BGI](guidelines-on-nbs-and-bgi.md)
+* [Nature-Based Solutions Library](naturebasedsolutionslibrary.md)
+* [Climate Risk Assessment Toolbox](climate-risk-toolbox.md)
 * [References](references.md)
 * [test](test.md)
 * [CRA Workflow](cra-workflow/README.md)

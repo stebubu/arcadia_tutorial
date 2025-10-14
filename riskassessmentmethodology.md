@@ -86,7 +86,41 @@ This framework serves as a guide to tailor specific strategies for climate adapt
 
 
 
+Below is a **comparative matrix** showing the relationship between **climate hazard classes** and the **types of Nature-Based Solutions (NBS) or Blue-Green Infrastructure (BGI)** implemented in the ARCADIA Innovation Labs (from _Annex 5 Flowcharts_ and _M8.2 Toolkit_).
 
+***
+
+### 🌍 Combined Matrix — Climate Hazards × NBS/BGI Types
+
+| **Climate Hazard Class**                                                | **Typical NBS / BGI Project Types**                                                                                                                                                         | **Regions / Innovation Labs Applying Them**                                                                                                                     | **Main Expected Benefits**                                                                                                |
+| ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| **1. Floods (pluvial, fluvial, coastal)**                               | - Wetland & floodplain restoration - Riverbank & riparian vegetation - Forested Infiltration Areas (FIAs) - Agroforestry belts - Urban drainage / rain gardens - Blue-green corridors       | 🇮🇹 Emilia-Romagna (Labs 1 & 3) 🇦🇹 Lower Austria (Wagram–Tulln) 🇩🇰 Funen (Vollsmose) 🇸🇪 Helsingborg, Malmö 🇸🇮 Podravje 🇧🇬 Plovdiv 🇷🇴 Centru Region | - Reduced runoff & flood peaks - Increased infiltration and retention - Improved water quality - Biodiversity restoration |
+| **2. Droughts / Water Scarcity**                                        | - Water reservoirs & infiltration forests - Irrigation & drainage rehabilitation - Wetland rewetting - Sustainable forest management (SFM) - Soil moisture monitoring & adaptive irrigation | 🇮🇹 Emilia-Romagna (Lab 3) 🇸🇮 Podravje 🇩🇰 Funen 🇷🇴 Centru (Irrigation rehab) 🇸🇪 Helsingborg                                                            | - Increased water storage - Soil moisture conservation - Crop and forest resilience - Improved water reuse cycles         |
+| **3. Landslides / Erosion**                                             | - Slope reforestation (SFM) - Terracing & soil retention buffers - Vegetated barriers - Erosion control forests (RUSLE-based)                                                               | 🇮🇹 Emilia-Romagna (Lab 1) 🇭🇷 Krapina-Zagorje (Pregrada) 🇧🇬 Plovdiv                                                                                        | - Stabilized slopes - Reduced sediment yield - Soil protection & reduced runoff                                           |
+| **4. Heatwaves / Urban Heat Island (UHI)**                              | - Urban greening / depaving - Green roofs & facades - Urban forests - Parks & green corridors - Water-based cooling (urban blue elements)                                                   | 🇦🇹 Lower Austria (Mistelbach, Amstetten) 🇭🇷 Zagreb, Zabok 🇸🇪 Malmö, Lund 🇷🇴 Brașov 🇩🇰 Funen (urban drainage + greening)                               | - Temperature reduction (2–4°C) - Improved air quality - Urban comfort & wellbeing - Carbon sequestration                 |
+| **5. Biodiversity Loss / Ecosystem Fragmentation**                      | - Habitat restoration & green corridors - Forest & marine connectivity networks - Agroforestry & hedgerows - Blue-green infrastructure networks                                             | 🇮🇹 Emilia-Romagna (SFM 2) 🇦🇹 Lower Austria 🇭🇷 Zabok 🇸🇪 Helsingborg 🇧🇬 Plovdiv 🇩🇰 Funen (BGI network)                                                | - Habitat connectivity - Pollination & ecosystem services - Soil & water quality improvement                              |
+| **6. Coastal / Marine Hazards (Sea-level rise, erosion, salinization)** | - Coastal wetland & salt meadow restoration - Natural barriers (reefs, dunes, vegetated levees) - Blue corridors linking river–coast systems                                                | 🇩🇰 Funen (Odense Fjord) 🇸🇪 Helsingborg (peri-urban blue corridors) 🇧🇬 Plovdiv (riparian restoration)                                                      | - Coastal protection - Reduced wave energy & erosion - Marine biodiversity enhancement                                    |
+| **7. Wildfires**                                                        | - Afforestation & fire-resilient forestry - Forest fuel management (SFM)                                                                                                                    | 🇧🇬 Plovdiv 🇮🇹 Emilia-Romagna                                                                                                                                | - Reduced fire spread risk - Increased forest resilience                                                                  |
+| **8. Air & Water Pollution**                                            | - Ecological wastewater treatment (constructed wetlands, vegetation filters) - Buffer strips & riparian zones - Rainwater harvesting systems                                                | 🇷🇴 Viscri (ecological WWTP) 🇩🇰 Funen (stormwater & nutrient control) 🇮🇹 Emilia-Romagna (water quality SFM)                                                | - Water purification - Reduced nutrient loads - Enhanced ecosystem health                                                 |
+
+***
+
+#### 🔍 Key Insights
+
+* **Multi-hazard overlap:** Most NBS target _multiple hazards_ — e.g. wetlands address both floods _and_ droughts.
+* **Dominant classes per region:**
+  * _Forestry–mountain regions:_ Italy, Slovenia, Bulgaria
+  * _Urban/heat–resilience:_ Austria, Croatia, Sweden
+  * _Coastal/water systems:_ Denmark
+  * _Infrastructure–pollution mitigation:_ Romania
+* **Cross-cutting tools used:**
+  * Hydrological & ecosystem models (**SWAT+**, **INVEST**, **RUSLE**)
+  * Climate datasets (**ERA5**, **EUROCORDEX**, **CMIP6**)
+  * Decision Support Systems (e.g. **IRRIFRAME**, **DK2020**, **ARPAE APIs**)
+
+***
+
+Would you like me to extend this matrix into a **visual cross-tab (hazards × NBS categories grid)** — e.g., with ✔️ marks or color-coded intensity (low/medium/high applicability) — suitable for inclusion in a report or ArcGIS dashboard?
 
 
 

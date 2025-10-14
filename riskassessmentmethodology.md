@@ -29,11 +29,13 @@ This section should provide templates or worksheets for conducting the assessmen
 
 #### Climate Risk Assessment Framework
 
-The climate risk assessment framework for each Innovation Lab across the Arcadia Regions has been defined after thorough consultation and is illustrated in the image below.
+The climate risk assessment framework for each Innovation Lab across the Arcadia Regions has been defined after thorough consultation and is illustrated in the images below.
 
 
 
 <figure><img src=".gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 To ensure a comprehensive evaluation:
 
@@ -46,5 +48,72 @@ This framework serves as a guide to tailor specific strategies for climate adapt
 
 <figure><img src=".gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
+🇮🇹 **Italy – Emilia-Romagna Region**
 
+| **Innovation Lab**                                                                 | **Main Hazards**                    | **NBS / Projects**                                        | **Models / Tools Used**         |
+| ---------------------------------------------------------------------------------- | ----------------------------------- | --------------------------------------------------------- | ------------------------------- |
+| **Lab 1 – Sustainable Forest Management (SFM) aimed at flood and landslide risks** | Floods, landslides                  | Forest management for slope stability and runoff control  | INVEST (SDR), RUSLE, CRITERIA3D |
+| **Lab 2 – SFM for forest resilience and wood supply chain valorization**           | Extreme rainfall, biodiversity loss | Sustainable forest harvesting and wood chain valorization | INVEST (CSS), RUSLE, SWY        |
+| **Lab 3 – Forested Infiltration Areas (FIAs) for water quality and storage**       | Drought, heavy precipitation        | Forested infiltration areas, water quality monitoring     | **SWAT+**, **IRRIFRAME**        |
+
+***
+
+#### 🇦🇹 **Austria – Lower Austria Region**
+
+| **Innovation Lab**         | **Main Hazards**         | **NBS / Projects**                                    | **Models / Tools Used**                                         |
+| -------------------------- | ------------------------ | ----------------------------------------------------- | --------------------------------------------------------------- |
+| **Wagram–Tulln**           | Flood, drought, heatwave | Agroforestry/hedges, multifunctional shelterbelts     | Flood hazard & heat models, Copernicus ERA5, CMIP5/6            |
+| **Mistelbach–Wolkersdorf** | Urban heat, flooding     | Urban greening, depaving, climate-resilient buildings | EUROCORDEX, UERRA, E-OBS                                        |
+| **Amstetten**              | Floods, drought          | Rural greening, water retention systems               | Same as above; models integrated into dashboards and story maps |
+
+***
+
+#### 🇭🇷 **Croatia**
+
+| **Innovation Lab**  | **Main Hazards**                    | **NBS / Projects**                  | **Models / Tools Used**                              |
+| ------------------- | ----------------------------------- | ----------------------------------- | ---------------------------------------------------- |
+| **Zagreb**          | Urban heat, flash floods            | Rain gardens, green-blue belt       | Copernicus ERA5, Flood Hazard Models, GIS dashboards |
+| **Krapina–Zagorje** | Landslides, biodiversity loss, heat | Urban gardens, under-evaluation NBS | E-OBS, UERRA, INVEST                                 |
+
+***
+
+#### 🇸🇪 **Sweden – Skåne Region**
+
+| **Innovation Lab** | **Main Hazards**                    | **NBS / Projects**                                       | **Models / Tools Used**                           |
+| ------------------ | ----------------------------------- | -------------------------------------------------------- | ------------------------------------------------- |
+| **Malmö**          | Heatwave, flood                     | Urban Landscape Lab for multifunctional public spaces    | Copernicus ERA5, CMIP6, Heat Model                |
+| **Helsingborg**    | Floods, droughts, biodiversity loss | Blue-green peri-urban corridors                          | Hydrological & land-use models                    |
+| **Lund**           | Flood, drought                      | Urban Forest (climate-adapted species, phytoremediation) | SMHI data, EUROCORDEX, blue-green corridor models |
+
+***
+
+#### 🇩🇰 **Denmark – Funen Region**
+
+| **Innovation Lab**     | **Main Hazards**                             | **NBS / Projects**                                                                                 | **Models / Tools Used**                                                              |
+| ---------------------- | -------------------------------------------- | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| **Vollsmose (Odense)** | Flooding, sea level rise, rising groundwater | Rainwater lakes, open water channels, reforestation, coastal wetlands, eelgrass & reef restoration | DK2020 climate data, Copernicus ERA5, Jupyter NB, WMS dashboard, Flood Hazard Models |
+
+***
+
+#### 🇸🇮 **Slovenia – Podravje Region**
+
+| **Innovation Lab**  | **Main Hazards**           | **NBS / Projects**                                                          | **Models / Tools Used**                              |
+| ------------------- | -------------------------- | --------------------------------------------------------------------------- | ---------------------------------------------------- |
+| **Podravje Region** | Flood, drought, urban heat | Wetland restoration, water reservoirs, vegetation restoration, rain gardens | Copernicus ERA5, Flood Hazard & Water Quality Models |
+
+***
+
+#### 🇧🇬 **Bulgaria – Plovdiv Province**
+
+| **Innovation Lab**   | **Main Hazards**                       | **NBS / Projects**                                                                                    | **Models / Tools Used**                             |
+| -------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
+| **Plovdiv Province** | Floods, droughts, heatwaves, wildfires | Floodplain and wetland restoration, afforestation, biodiversity conservation, riverbank stabilization | Copernicus ERA5, ARPEGE/ALADIN, Flood Hazard Models |
+
+***
+
+#### 🇷🇴 **Romania – Centru Region**
+
+| **Innovation Lab** | **Main Hazards** | **NBS / Projects**                                                                                               | **Models / Tools Used**                                              |
+| ------------------ | ---------------- | ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| **Centru Region**  | Heat waves       | Green & blue infrastructure, irrigation & drainage rehab, Viscri wastewater plant, green urban strategy (Brașov) | Copernicus ERA5, CMIP6, national hydrological models, GIS dashboards |
 

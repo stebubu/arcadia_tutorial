@@ -1,4 +1,4 @@
-# slo podravje region draft2
+# Podravje, Slovenia
 
 ### Introduction and Objectives of the Climate Risk Assessment
 
@@ -137,7 +137,7 @@ If you have reference maps (e.g. Figure 1) or observed stages corresponding to o
 &#x20;**Where no detailed modeling of the river is possible** nor of interest (e.g. for lack of river cross sections or presence of stable embankments) an alternative approach is estimating **flood volume outside of the river** (e.g. a fraction of the expected event volume in the river) and simulating a flood domain outside of the river , as in the example of Figure 7
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Figure 4 – example of flood maps for a generic lowland area, derived by 2d Modeling of estimated flood volumes outside of the river , courtesy of <a href="https://saferplaces.co/rimini-and-climate-change-the-added-value-of-the-sea-park-parco-del-mare/">SaferPlaces</a> platform.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Figure 4 – example of flood maps for a generic lowland area, derived by 2d Modeling of estimated flood volumes outside of the river , courtesy of <a href="https://saferplaces.co/rimini-and-climate-change-the-added-value-of-the-sea-park-parco-del-mare/">SaferPlaces</a> platform.</p></figcaption></figure>
 {% endstep %}
 
 {% step %}

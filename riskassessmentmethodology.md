@@ -48,6 +48,48 @@ This framework serves as a guide to tailor specific strategies for climate adapt
 
 <figure><img src=".gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
+#### 🧭 Comparative Matrix – ARCADIA Innovation Labs (WP8)
+
+| **Country / Region**                 | **Innovation Lab**                                  | **Main Climate Hazards**                            | **NBS / BGI Projects**                                                                              | **Models / Tools Used**                                      |
+| ------------------------------------ | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| 🇮🇹 **Italy – Emilia-Romagna**      | **Lab 1 – SFM for flood & landslide risks**         | Floods, landslides                                  | Sustainable Forest Management (SFM), slope stabilization                                            | INVEST (SDR), RUSLE, CRITERIA3D                              |
+|                                      | **Lab 2 – SFM for forest resilience & wood supply** | Floods, droughts, biodiversity loss                 | Forest resilience enhancement, sustainable harvesting                                               | INVEST (CSS), RUSLE, SWY                                     |
+|                                      | **Lab 3 – FIAs for water quality & storage**        | Drought, heavy precipitation                        | Forested Infiltration Areas (FIAs), soil and water monitoring                                       | **SWAT+**, **IRRIFRAME**                                     |
+| 🇦🇹 **Austria – Lower Austria**     | **Wagram–Tulln**                                    | Floods, droughts, heatwaves                         | Agroforestry systems, hedges, multifunctional shelterbelts                                          | Copernicus ERA5, CMIP5/6, Flood & Heat Models                |
+|                                      | **Mistelbach–Wolkersdorf**                          | Urban heat, flooding                                | Urban greening, depaving, green facades                                                             | EUROCORDEX, UERRA, E-OBS                                     |
+|                                      | **Amstetten**                                       | Soil erosion, drought                               | Rural greening, water retention                                                                     | Dashboards, story maps, REST APIs                            |
+| 🇭🇷 **Croatia**                     | **Zagreb**                                          | Urban heat, flash floods                            | Rain gardens, green-blue belt                                                                       | Copernicus ERA5, Flood Hazard Models, GIS tools              |
+|                                      | **Krapina–Zagorje**                                 | Landslides, biodiversity loss, heat                 | Urban gardens, green roofs (planned)                                                                | UERRA, E-OBS, INVEST                                         |
+| 🇸🇪 **Sweden – Skåne Region**       | **Malmö**                                           | Heatwaves, floods                                   | Urban Landscape Lab (multifunctional green public spaces)                                           | Copernicus ERA5, CMIP6, Heat & Flood Models                  |
+|                                      | **Helsingborg**                                     | Floods, drought, biodiversity loss                  | Blue-green peri-urban corridors                                                                     | Hydrological & land-use models                               |
+|                                      | **Lund**                                            | Flood, drought                                      | Urban Forest (climate-adapted species, phytoremediation)                                            | SMHI, EUROCORDEX                                             |
+| 🇩🇰 **Denmark – Funen Region**      | **Vollsmose (Odense)**                              | Floods, sea-level rise, groundwater rise, pollution | Rainwater lakes, open channels, reforestation, coastal wetlands, eelgrass & reef restoration        | DK2020 datasets, Copernicus ERA5, Jupyter NB, WMS dashboards |
+| 🇸🇮 **Slovenia – Podravje Region**  | **Podravje**                                        | Flood, drought, urban heat                          | Wetland restoration, water reservoirs, vegetation restoration, rain gardens                         | Copernicus ERA5, Water Quality & Flood Models                |
+| 🇧🇬 **Bulgaria – Plovdiv Province** | **Plovdiv**                                         | Floods, droughts, heatwaves, wildfires              | Floodplain/wetland restoration, riverbank stabilization, afforestation, biodiversity corridors      | ARPEGE, ALADIN, ERA5, Flood Hazard Models                    |
+| 🇷🇴 **Romania – Centru Region**     | **Centru Region**                                   | Heatwaves                                           | Green & blue infrastructure, irrigation/drainage rehab, ecological wastewater plant, green mobility | Copernicus ERA5, CMIP6, National hydrological & GIS models   |
+
+***
+
+#### 🔍 Observations
+
+* **Common Hazards:** Floods and droughts are universal; heatwaves dominate in urban regions (Zagreb, Malmö, Brașov).
+* **Dominant NBS Types:**
+  * _Forestry & watershed management_ → Italy, Slovenia, Bulgaria
+  * _Urban greening & blue-green corridors_ → Austria, Croatia, Sweden
+  * _Coastal & water cycle management_ → Denmark
+  * _Green infrastructure & eco-urban planning_ → Romania
+* **Most Used Models:**
+  * **SWAT+** and **RUSLE** for hydrology and erosion
+  * **INVEST** for ecosystem services
+  * **EUROCORDEX / ERA5 / CMIP6** for climate projections
+  * **Local DSS or national platforms** (ARPAE, SMHI, DK2020, IRRIFRAME) for regional integration
+
+
+
+
+
+
+
 🇮🇹 **Italy – Emilia-Romagna Region**
 
 | **Innovation Lab**                                                                 | **Main Hazards**                    | **NBS / Projects**                                        | **Models / Tools Used**         |
